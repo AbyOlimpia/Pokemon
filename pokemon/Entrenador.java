@@ -16,4 +16,6 @@ public class Entrenador {
     public int getPokedollar() {
         return pokedollar;
     }
+
+    //prueba
 }
