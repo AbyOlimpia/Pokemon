@@ -17,5 +17,5 @@ public class Entrenador {
         return pokedollar;
     }
 
-    //prueba
+    //prueba2
 }
