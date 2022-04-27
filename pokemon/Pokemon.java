@@ -16,7 +16,8 @@ public class Pokemon implements IMetodos {
     private TipoDos tipo2;
     // lista de movimientos. Crear una lista con los diferentes movimientos o array
 
-    Pokemon() {
+    Pokemon(String paramNombre) {
+        this.nombre = paramNombre;
     }
 
     public int getAtaque() {
@@ -74,13 +75,11 @@ public class Pokemon implements IMetodos {
 
     @Override
     public int subirNivel() {
-        // TODO Auto-generated method stub
         return 0;
     }
 
     @Override
     public int atacar(Pokemon pokemon) {
-        // TODO Auto-generated method stub
         return 0;
     }
 
