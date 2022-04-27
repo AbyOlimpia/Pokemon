@@ -14,7 +14,7 @@ public class Pokemon implements IMetodos {
     private Estado estados;
     private TipoUno tipo1;
     private TipoDos tipo2;
-    // lista de movimientos. Crear una lista con los diferentes movimientos
+    // lista de movimientos. Crear una lista con los diferentes movimientos o array
 
     Pokemon() {
     }

@@ -1,4 +1,4 @@
-package pokemon;
+package entrenador;
 
 public class Entrenador {
     private String nombre;
