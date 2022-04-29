@@ -1,6 +1,6 @@
 package pokemon;
 
-public class Pokemon implements IMetodos {
+public class Pokemon {
     private String nombre;
     private String mote;
     private int vitalidad;
@@ -12,8 +12,8 @@ public class Pokemon implements IMetodos {
     private int nivel;
     private int fertilidad = 5;
     private Estado estados;
-    private TipoUno tipo1;
-    private TipoDos tipo2;
+    private Tipo tipo;
+    private Movimiento movimiento;
     // lista de movimientos. Crear una lista con los diferentes movimientos o array
 
     Pokemon(String paramNombre) {
@@ -60,27 +60,25 @@ public class Pokemon implements IMetodos {
     public String getNombre() {
         return nombre;
     }
-
-    public TipoUno getTipo1() {
-        return tipo1;
-    }
-
-    public TipoDos getTipo2() {
-        return tipo2;
+    public Tipo getTipo() {
+        return tipo;
     }
 
     public int getVitalidad() {
         return vitalidad;
+    
     }
+    public int subirNivel(){
+        return vitalidad;
 
-    @Override
-    public int subirNivel() {
-        return 0;
     }
+    public Movimiento getMovimiento() {
+        return movimiento;
+    }
+    public int atacar(Pokemon pokemon){
+        return ataque;
 
-    @Override
-    public int atacar(Pokemon pokemon) {
-        return 0;
     }
+    
 
 }
