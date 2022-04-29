@@ -1,1 +1,94 @@
-<mxfile host="app.diagrams.net" modified="2022-04-28T12:18:59.015Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="GVDCVL_SeZrcBlF7_j3r" version="17.4.6" type="device"><diagram id="CBH9kjqgBpxh-lcx360y" name="Page-1">7Zlbk6I4FIB/DVWzD9PFRVAeUWIPNQ04Svc6T120ZJQaJG6Io/av3wSC3KK9OzNqbfVWWS05SQ7n+kloSRut9/c43KxcFMFEUuVoL2m2pKpKT1Ul9pGjQyEZyHIhWOI44osqwSx+hVxYLtvGEcwaCwlCCYk3TeECpSlckIYsxBjtmsu+oaR51024hB3BbBEmXemfcURW3Au1X8k/wXi5Ku+sGGYxsw7LxdyTbBVGaFcTaUDSRhghUlyt9yOYsOCVcSn2jU/MHg3DMCX/ZAN6NvwkmXwag/l6/PTyOv86uP/ItfwIky13ePKZjr1H93nifwY2mEuqkVD9wxdMr5bsyvPd4RRI7HbFVLYJU+YgOfCoGX9tmVfD3Som8COdXlC5xazFsJot9dFvSdXM4iopJONCJ7+h1zXCca174F3RiFs6O/M9x/bfibOBM/EVVoN+kFfiw4N4DQdLZZuK0TaNICt3uTRxVlho7yidqGxF1gkdKbkleeFDTOD+ZEcpxz6lgINoDQk+0CXlhhJSnG2Kwce7ihSKxmWrOiVKYcjptDzqrhqYXvAe/hf9rAr7+TrJdOycGa4vSOr4mlYAL5gCz7L96S0NOctQ1w9AV/rkBNaDY1t2d8oGY+DNrO6EFVhfHgW6+IZnMJuAkWMJmqjYeWbBE3jwR2JzwCywXMdj9oRr1lnpS7apxaL2a+FQNQIF8wmYOsCjdxYkCUwD50QgWH6/PNL+/6Dc0dyo7I/2x81ZoLVZYOpdFhgCFqiqfiEW9LosKMuxFSzqNmlGJEziZUqvF9R9iKmABSemj0UWn1jHUcS2DzHM4tfwJVfFQr1BcUpyV/ShpNtM15agrHiwY6ozgtF3OEIJonrtFKVMy7c4SVqiSwC61wV0X5STS+FZF6aEEvMss95NvtSyacp89QVNdNWE9TsJ6yQDppHFDhos+kmYZfGimZomiWgk8GFeH3xlgztV1kuBva9P24dytI8J26jcyYrCx3wvH1Ub2aC+bwJxTAPCKqPS3BYWnsGocyBqpY96j7Z4Ad8+VpAQLyF563GlWw61dOuCbJcyDJOQxD+a5opKgN9hwkq9hmyzSQet36qiwk2+q36yainq9VqK2uVYxKGjKK/Io9s/X6SDTpG+8RBUnuDa8uPj241/THW9GdDj24A6BxRBZRiX4oDZCfH/wM4T1QK2KUiUfE1gK903Gr9KbM5ducFc/Txzj5S/M81ek/TKcXwK9BeG8+A/Ced2a/80nJXrwlnRRHR2/SfHpcefwBfS+ew8e/lx+qSdz57bPvK92XN1frsx6g35RJ7rBOkJ6mxwMYJ0z03nwvluWG+oTdZrgsOU+XtQT4fVe/GiEav/Lmjgbw==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-04-29T12:12:58.397Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="R5qexIJyAk5rG6O2lGOO" version="17.4.6" type="github">
+  <diagram id="CBH9kjqgBpxh-lcx360y" name="Page-1">
+    <mxGraphModel dx="1710" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-1" value="PK NUM_POKEDEX&lt;br&gt;NOMBRE &lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;NN&lt;br&gt;IMAGEN &lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;NN&lt;br&gt;SONIDO &lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;NN&lt;br&gt;TIPO1 NOT NULL&lt;br&gt;TIPO2" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="90" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-2" value="PK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ID_POKEMON&lt;br&gt;FK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ID_ENTRENADOR&lt;br&gt;FK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;NUM_POKEDEX&lt;br&gt;MOTE&lt;br&gt;VITALIDAD&lt;br&gt;DEFENSA&lt;br&gt;ATAQUE&lt;br&gt;DEFENSA_ESPECIAL&lt;br&gt;ATAQUE_ESPECIAL&lt;br&gt;VELOCIDAD&lt;br&gt;ESTAMINA&amp;nbsp;&lt;br&gt;NIVEL&lt;br&gt;EXPERIENCIA&lt;br&gt;FERTILIDAD&lt;br&gt;ID_EQUIPO(1. 2. 3) NN" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="70" width="160" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-4" value="POKEDEX" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="100" y="70" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-5" value="POKEMON_ENTRENADOR&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="310" y="50" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.205;entryDx=0;entryDy=0;exitX=1.011;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" parent="1" source="o_6OllPHFEXmFVbzXY8G-1" target="o_6OllPHFEXmFVbzXY8G-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="370" as="sourcePoint" />
+            <mxPoint x="440" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-8" value="ID_ENTRENADOR&lt;br&gt;NOMBRE&lt;br&gt;POKEMON" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="615" y="70" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-9" value="ENTRENADOR&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="620" y="50" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.994;entryY=0.14;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="o_6OllPHFEXmFVbzXY8G-8" target="o_6OllPHFEXmFVbzXY8G-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="360" as="sourcePoint" />
+            <mxPoint x="440" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-13" value="PK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ID_MOVIMIENTO&lt;br&gt;NOM_MOVIMIENTO&lt;br&gt;TIPO_POKEMON&lt;br&gt;TIPO_MOVIMIENTO&lt;br&gt;CONS_ESTAMINA&lt;br&gt;NIVEL&lt;br&gt;POTENCIA&lt;br&gt;FK ID_ESTADO&lt;br&gt;ID_MEJORA" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="335" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="o_6OllPHFEXmFVbzXY8G-14" value="MOVIMIENTO&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="100" y="315" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-1" value="PK ID_ESTADO&lt;br&gt;NOM_ESTADO&lt;br&gt;NUM_TURNOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-2" value="ESTADO&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="460" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-3" value="PK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ID_MEJORA&lt;br&gt;MEJORA&lt;br&gt;CANT_MEJORA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-4" value="MEJORA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="165" y="520" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-7" value="PK FK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ID_POKEMON&lt;br&gt;PK FK&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ID_MOVIMIENTO&lt;br&gt;LISTA_MOVIMIENTO(1, 2)&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="329" y="350" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-8" value="MOVIMIENTO_POKEMON" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="334" y="330" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-9" value="AGUA&amp;nbsp;&lt;br&gt;FUEGO&lt;br&gt;PLANTA&lt;br&gt;VOLADOR&lt;br&gt;ELECTRICO&lt;br&gt;TIERRA&lt;br&gt;BICHO" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="140" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-10" value="TIPOS&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="535" y="120" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="UOC0xMfc8gk7T0B58Shv-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="350" as="sourcePoint" />
+            <mxPoint x="280" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="UOC0xMfc8gk7T0B58Shv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="450" as="sourcePoint" />
+            <mxPoint x="250" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UOC0xMfc8gk7T0B58Shv-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.9;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="o_6OllPHFEXmFVbzXY8G-13" target="UOC0xMfc8gk7T0B58Shv-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="480" as="sourcePoint" />
+            <mxPoint x="400" y="515" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
