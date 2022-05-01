@@ -1,4 +1,4 @@
-package pokemon;
+package src.pokemon;
 
 public enum TipoUno {
     AGUA,

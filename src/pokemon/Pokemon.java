@@ -1,4 +1,4 @@
-package pokemon;
+package src.pokemon;
 
 public class Pokemon implements IMetodos {
     private String nombre;
