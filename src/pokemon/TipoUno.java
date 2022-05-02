@@ -6,6 +6,7 @@ public enum TipoUno {
     PLANTA,
     VOLADOR,
     ELECTRICO,
-    TIERRA
+    TIERRA,
+    VENENO
     
 }

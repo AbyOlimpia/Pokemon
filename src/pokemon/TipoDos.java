@@ -6,6 +6,7 @@ public enum TipoDos {
     PLANTA,
     VOLADOR,
     ELECTRICO,
-    TIERRA
+    TIERRA,
+    VENENO
     
 }
