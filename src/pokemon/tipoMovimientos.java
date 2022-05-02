@@ -2,7 +2,7 @@ package src.pokemon;
 
 
 public enum tipoMovimientos {
-    Físico,
+    Fisico,
     Especial,
     Efecto,
     Mejora
