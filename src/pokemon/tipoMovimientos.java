@@ -1,18 +1,9 @@
 package src.pokemon;
 
 public enum TipoMovimientos {
-    FUEGO,
     AGUA,
-    ROCA,
-    TIERRA,
-    DRAGON,
-    ELECTRICO,
-    HIELO,
+    FUEGO,
     PLANTA,
     VOLADOR,
-    LUCHA,
-    BICHO,
-    PSIQUICO,
-    FANTASMA,
-    SINIESTRO
+    ELECTRICO
 }

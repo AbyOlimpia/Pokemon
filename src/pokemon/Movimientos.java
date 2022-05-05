@@ -7,7 +7,6 @@ public class Movimientos {
 
     private int potencia;
     private int estaminaConsumida;
-    private int mejora;
 
     private String nombre;
     private String descripcion;

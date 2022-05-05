@@ -5,8 +5,6 @@ public enum TipoDos {
     FUEGO,
     PLANTA,
     VOLADOR,
-    ELECTRICO,
-    TIERRA,
-    VENENO
+    ELECTRICO
     
 }

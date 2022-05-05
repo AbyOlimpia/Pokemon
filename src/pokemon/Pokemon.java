@@ -1,6 +1,6 @@
 package src.pokemon;
 
-public class Pokemon implements IMetodos {
+public class Pokemon  {
     private String nombre;
     private String mote;
     private int vitalidad;
@@ -73,14 +73,6 @@ public class Pokemon implements IMetodos {
         return vitalidad;
     }
 
-    @Override
-    public int subirNivel() {
-        return 0;
-    }
-
-    @Override
-    public int atacar(Pokemon pokemon) {
-        return 0;
-    }
+    
 
 }
