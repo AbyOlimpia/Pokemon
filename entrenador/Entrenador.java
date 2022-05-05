@@ -1,11 +1,15 @@
 package entrenador;
 
+import src.pokemon.Pokemon;
+
 public class Entrenador {
+    private Pokemon team;
+    private Pokemon teamSec;
     private String nombre;
     private int pokedollar;
 
     Entrenador(String paramNombre) {
-        this.nombre=paramNombre;
+        this.nombre = paramNombre;
 
     }
 
@@ -17,5 +21,13 @@ public class Entrenador {
         return pokedollar;
     }
 
-    //prueba2
+    public Pokemon getTeam() {
+        return team;
+    }
+
+    public Pokemon getTeamSec() {
+        return teamSec;
+    }
+
+    // prueba2
 }
