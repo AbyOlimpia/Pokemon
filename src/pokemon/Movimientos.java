@@ -12,13 +12,12 @@ public class Movimientos {
     private String nombre;
     private String descripcion;
 
-    public Movimientos(TipoMovimientos tipo, claseMovimientos clase, int potencia, int estaminaConsumida, String nombre, String descripcion, int mejora){
+    public Movimientos(TipoMovimientos tipo, claseMovimientos clase, int potencia, int estaminaConsumida, String nombre, String descripcion){
         this.tipo = tipo;
         this.clase = clase;
         this.estaminaConsumida = estaminaConsumida;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.mejora = mejora;
     }
     public claseMovimientos getClase() {
         return clase;
@@ -38,8 +37,6 @@ public class Movimientos {
     public TipoMovimientos getTipo() {
         return tipo;
     }
-    public int getMejora() {
-        return mejora;
-    }
+    
 
 }
