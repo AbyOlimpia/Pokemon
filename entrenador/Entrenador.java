@@ -1,10 +1,10 @@
 package entrenador;
 
-import src.pokemon.Pokemon;
+import pokemon.Pokemon;
 
 public class Entrenador {
-    private Pokemon team;
-    private Pokemon teamSec;
+    private Pokemon[] team;
+    private Pokemon[] teamSec;
     private String nombre;
     private int pokedollar;
 
@@ -21,13 +21,29 @@ public class Entrenador {
         return pokedollar;
     }
 
-    public Pokemon getTeam() {
+    public Pokemon[] getTeam() {
         return team;
     }
 
-    public Pokemon getTeamSec() {
+    public Pokemon[] getTeamSec() {
         return teamSec;
     }
 
-    // prueba2
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPokedollar(int pokedollar) {
+        this.pokedollar = pokedollar;
+    }
+
+    public void setTeam(Pokemon[] team) {
+        this.team = team;
+    }
+
+    public void setTeamSec(Pokemon[] teamSec) {
+        this.teamSec = teamSec;
+
+    }
+
 }

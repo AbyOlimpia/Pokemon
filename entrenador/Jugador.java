@@ -4,12 +4,22 @@ import pokemon.Pokemon;
 
 public class Jugador extends Entrenador{
 
-    private Pokemon teamJugador;
-    private Pokemon teamSecJugador;
+    private int[] almacenamiento;
+
 
     Jugador(String paramNombre) {
         super(paramNombre);
-        //TODO Auto-generated constructor stub
+        
+    }
+    @Override
+    public Pokemon[] getTeam() {
+        // TODO Auto-generated method stub
+        return super.getTeam();
+    }
+    @Override
+    public Pokemon[] getTeamSec() {
+        // TODO Auto-generated method stub
+        return super.getTeamSec();
     }
     @Override
     public String getNombre() {
@@ -21,22 +31,7 @@ public class Jugador extends Entrenador{
         // TODO Auto-generated method stub
         return super.getPokedollar();
     }
-    @Override
-    public Pokemon getTeam() {
-        // TODO Auto-generated method stub
-        return super.getTeam();
+    public int[] getAlmacenamiento() {
+        return almacenamiento;
     }
-    @Override
-    public Pokemon getTeamSec() {
-        // TODO Auto-generated method stub
-        return super.getTeamSec();
-    }
-    public Pokemon getTeamJugador() {
-        return teamJugador;
-    }
-    public Pokemon getTeamSecJugador() {
-        return teamSecJugador;
-    }
-
-    
 }

@@ -3,12 +3,12 @@ package entrenador;
 import pokemon.Pokemon;
 
 public class Rival extends Entrenador {
+
+
     Rival(String paramNombre) {
         super(paramNombre);
         // TODO Auto-generated constructor stub
     }
-
-    private Pokemon teamRi;
 
     @Override
     public String getNombre() {
@@ -23,19 +23,10 @@ public class Rival extends Entrenador {
     }
 
     @Override
-    public Pokemon getTeam() {
+    public Pokemon[] getTeam() {
         // TODO Auto-generated method stub
         return super.getTeam();
-    }
-
-    @Override
-    public Pokemon getTeamSec() {
-        // TODO Auto-generated method stub
-        return super.getTeamSec();
-    }
-
-    public Pokemon getTeamRi() {
-        return teamRi;
+    
     }
 
 }

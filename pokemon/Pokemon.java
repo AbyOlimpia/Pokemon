@@ -14,6 +14,7 @@ public class Pokemon {
     private Estado estados;
     private Tipo tipo;
     private Movimiento movimiento;
+    private int exp;
     // lista de movimientos. Crear una lista con los diferentes movimientos o array
 
     Pokemon(String paramNombre) {
@@ -60,25 +61,32 @@ public class Pokemon {
     public String getNombre() {
         return nombre;
     }
+
     public Tipo getTipo() {
         return tipo;
     }
 
     public int getVitalidad() {
         return vitalidad;
-    
-    }
-    public int subirNivel(){
-        return vitalidad;
 
     }
+
     public Movimiento getMovimiento() {
         return movimiento;
     }
-    public int atacar(Pokemon pokemon){
+
+    public int atacar(Pokemon pokemon) {
         return ataque;
+    }
+
+    public int nivelSubid(int expGanada) {
+        if (expGanada >= nivel * 10) {
+            nivel++;
+            return nivel;
+        } else {
+            return nivel;
+        }
 
     }
-    
 
 }

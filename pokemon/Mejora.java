@@ -8,13 +8,13 @@ public class Mejora extends Movimiento {
 
     @Override
     public int getConsumEstamina() {
-        // TODO Auto-generated method stub
+        
         return super.getConsumEstamina();
     }
 
     @Override
     public Tipo getTipo() {
-        // TODO Auto-generated method stub
+        
         return super.getTipo();
     }
 
