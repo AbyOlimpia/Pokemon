@@ -1,17 +1,19 @@
 package pokemon;
 
 import java.util.LinkedList;
+import java.util.random.*;
 
-public class Pokemon {
+public class Pokemon extends Movimiento{
+   
     private String nombre;
     private String mote;
-    private int vitalidad;
-    private int ataque;
-    private int defensa;
-    private int ataqueSp;
-    private int defensaSp;
-    private int estamina;
-    private int nivel;
+    private int vitalidad=(int)(Math.random()*10);;
+    private int ataque=(int)(Math.random()*10);
+    private int defensa=(int)(Math.random()*10);;
+    private int ataqueSp=(int)(Math.random()*10);;
+    private int defensaSp=(int)(Math.random()*10);;
+    private int estamina=(int)(Math.random()*10);;
+    private int nivel=(int)(Math.random()*10);;
     private int fertilidad = 5;
     private Estado estados;
     private Tipo tipo;
@@ -19,9 +21,11 @@ public class Pokemon {
     private int exp;
     private Efectividad efectividad;
     // lista de movimientos. Crear una lista con los diferentes movimientos o array
+    
 
-    Pokemon(String paramNombre) {
+    Pokemon(String paramNombre ) {
         this.nombre = paramNombre;
+    
     }
     public LinkedList getMovimiento() {
         return movimiento;
@@ -91,6 +95,7 @@ public class Pokemon {
 
     public void setAtaqueSp(int ataqueSp) {
         this.ataqueSp = ataqueSp;
+    
     }
 
     public void setDefensa(int defensa) {
@@ -161,7 +166,7 @@ public class Pokemon {
     }
 
     public int atacar(Pokemon pokemon) {
-        if()
+        if(movimiento)
         
         return 7;
     }
@@ -172,7 +177,14 @@ public class Pokemon {
             return nivel;
         } else {
             return nivel;
-        }
+        
+
+    }
+    
+     /*public String toString(){
+        return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
+
+    }*/
     }
 
 }
