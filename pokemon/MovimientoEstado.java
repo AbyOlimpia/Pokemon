@@ -3,22 +3,18 @@ package pokemon;
 public class MovimientoEstado extends Movimiento {
     private Estado estado;
     private int numTurnos;
-    private int dañoQuemadura;
 
     @Override
     public int getConsumEstamina() {
-        // TODO Auto-generated method stub
+        
         return super.getConsumEstamina();
     }
 
     @Override
     public Tipo getTipo() {
-        // TODO Auto-generated method stub
+        
         return super.getTipo();
-    }
-
-    public int getDañoQuemadura() {
-        return dañoQuemadura;
+    
     }
 
     public Estado getEstado() {
@@ -27,6 +23,14 @@ public class MovimientoEstado extends Movimiento {
 
     public int getNumTurnos() {
         return numTurnos;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public void setNumTurnos(int numTurnos) {
+        this.numTurnos = numTurnos;
     }
 
 }

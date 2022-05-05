@@ -43,7 +43,11 @@ public class Entrenador {
 
     public void setTeamSec(Pokemon[] teamSec) {
         this.teamSec = teamSec;
-
     }
+
+    /*public Pokemon[] moverPok(Pokemon[]team){
+
+        return team[];
+    }*/
 
 }
