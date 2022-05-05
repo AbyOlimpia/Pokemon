@@ -7,3 +7,6 @@ public enum TipoMovimientos {
     VOLADOR,
     ELECTRICO
 }
+/**
+ * Error tipografía corregido 
+ */
