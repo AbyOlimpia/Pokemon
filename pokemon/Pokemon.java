@@ -27,7 +27,7 @@ public class Pokemon {
         this.nombre = paramNombre;
     
     }
-    public LinkedList getMovimiento() {
+    public LinkedList<Movimiento> getMovimiento() {
         return movimiento;
     }
 
