@@ -1,6 +1,6 @@
 package src.pokemon;
 
-public enum TipoMovimientos {
+public enum tipoMovimientos {
     AGUA,
     FUEGO,
     PLANTA,

@@ -2,7 +2,7 @@ package src.pokemon;
 
 public class Movimientos {
     
-    private TipoMovimientos tipo;
+    private tipoMovimientos tipo;
     private claseMovimientos clase;
 
     private int potencia;
@@ -11,7 +11,7 @@ public class Movimientos {
     private String nombre;
     private String descripcion;
 
-    public Movimientos(TipoMovimientos tipo, claseMovimientos clase, int potencia, int estaminaConsumida, String nombre, String descripcion){
+    public Movimientos(tipoMovimientos tipo, claseMovimientos clase, int potencia, int estaminaConsumida, String nombre, String descripcion){
         this.tipo = tipo;
         this.clase = clase;
         this.estaminaConsumida = estaminaConsumida;
@@ -33,7 +33,7 @@ public class Movimientos {
     public int getPotencia() {
         return potencia;
     }
-    public TipoMovimientos getTipo() {
+    public tipoMovimientos getTipo() {
         return tipo;
     }
     
