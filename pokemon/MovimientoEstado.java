@@ -33,4 +33,9 @@ public class MovimientoEstado extends Movimiento {
         this.numTurnos = numTurnos;
     }
 
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+        
+    }
+
 }

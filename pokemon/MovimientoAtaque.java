@@ -23,4 +23,9 @@ public class MovimientoAtaque extends Movimiento {
         this.potenciaAtaq = potenciaAtaq;
     }
 
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+        
+    }
+
 }
