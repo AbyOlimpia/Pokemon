@@ -1,20 +1,16 @@
 package pokemon;
-
-import java.util.LinkedList;
-public class Movimiento {
-    private LinkedList movimiento;
+public abstract class Movimiento {
     private int consumEstamina;
     private Tipo tipo;
 
     public int getConsumEstamina() {
         return consumEstamina;
     }
-    public LinkedList getMovimiento() {
-        return movimiento;
-    }
 
     public Tipo getTipo() {
         return tipo;
     }
+
+    public abstract void aplicarMovimiento(Pokemon pokemon);
 
 }

@@ -1,6 +1,6 @@
 package pokemon;
 
-public class Mejora extends Movimiento {
+public abstract class Mejora extends Movimiento {
     private int numEfecto;
     private String tipoMejora;
     private int cantMejora;

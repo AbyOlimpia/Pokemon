@@ -3,7 +3,7 @@ package pokemon;
 import java.util.LinkedList;
 import java.util.random.*;
 
-public class Pokemon extends Movimiento{
+public class Pokemon {
    
     private String nombre;
     private String mote;
@@ -17,13 +17,13 @@ public class Pokemon extends Movimiento{
     private int fertilidad = 5;
     private Estado estados;
     private Tipo tipo;
-    private LinkedList movimiento;
+    private LinkedList<Movimiento> movimiento;
     private int exp;
     private Efectividad efectividad;
     // lista de movimientos. Crear una lista con los diferentes movimientos o array
     
 
-    Pokemon(String paramNombre ) {
+    Pokemon(String paramNombre) {
         this.nombre = paramNombre;
     
     }
@@ -165,10 +165,16 @@ public class Pokemon extends Movimiento{
         return Efectividad.POCO_EFICAZ;
     }
 
-    public int atacar(Pokemon pokemon) {
-        if(movimiento)
+    public int atacar(Pokemon pokemon, Movimiento movimiento) {
+        
+        movimiento.aplicarMovimiento(pokemon);
         
         return 7;
+    }
+
+    public void aplicarMejora(Mejora mejora){
+        mejora.aplicarMovimiento(this);
+        
     }
 
     public int nivelSubid(int expGanada) {
@@ -185,6 +191,6 @@ public class Pokemon extends Movimiento{
         return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
 
     }*/
-    }
 
+}
 }
