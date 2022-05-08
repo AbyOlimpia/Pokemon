@@ -1,6 +1,6 @@
 package src.pokemon;
 
-public enum TipoUno {
+public enum Tipo2 {
     AGUA,
     FUEGO,
     PLANTA,

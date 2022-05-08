@@ -1,4 +1,4 @@
-package entrenador;
+package src.entrenador;
 
 public class Entrenador {
     private String nombre;
