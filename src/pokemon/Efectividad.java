@@ -2,7 +2,7 @@ package src.pokemon;
 
 public enum Efectividad {
     SUPER_EFICAZ,
-    EFECTIVO,
+    EFICAZ,
     POCO_EFICAZ
     
 }
