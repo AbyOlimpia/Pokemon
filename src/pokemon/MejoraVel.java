@@ -1,11 +1,17 @@
 package src.pokemon;
 
-public class MejoraVel extends Movimiento{
+public class MejoraVel extends Movimiento {
 
-    @Override
-    public void aplicarMovimiento(Pokemon pokemon) {
-        
-        
+    MejoraVel(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
+        super(nombreMov, tipoMov, potenciaAtac, consumEstamina);
     }
-    
+
+    /*
+     * @Override
+     * public void aplicarMovimiento(Pokemon pokemon) {
+     * 
+     * 
+     * }
+     */
+
 }

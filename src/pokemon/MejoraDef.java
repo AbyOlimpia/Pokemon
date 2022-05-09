@@ -2,10 +2,15 @@ package src.pokemon;
 
 public class MejoraDef extends Movimiento {
 
-    @Override
-    public void aplicarMovimiento(Pokemon pokemon) {
-        // TODO Auto-generated method stub
-        
+    MejoraDef(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
+        super(nombreMov, tipoMov, potenciaAtac, consumEstamina);
     }
-    
+
+    /*
+     * @Override
+     * public void aplicarMovimiento(Pokemon pokemon) {
+     * 
+     * }
+     */
+
 }

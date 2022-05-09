@@ -5,19 +5,19 @@ import java.util.LinkedList;
 public class Pokemon {
     private String nombre;
     private String mote;
-    private int vitalidad;
+    protected int vitalidad;
     private int ataque;
     private int defensa;
     private int ataqueSp;
     private int defensaSp;
     private int estamina;
     private int nivel;
-    private int fertilidad = 5;
+    private int fertilidad;
     private LinkedList<Movimiento> movimientos;
     private Estado estados;
     private Tipo tipo;
 
-    public Pokemon(String paramNombre, int nivel) {
+    public Pokemon(String paramNombre, int nivel, Tipo tipo) {
         this.nombre = paramNombre;
         this.vitalidad = (int) (Math.random() * 10);
         this.ataque = (int) (Math.random() * 10);
@@ -27,6 +27,7 @@ public class Pokemon {
         this.estamina = 100;
         this.nivel = 1;
         this.fertilidad = 5;
+        this.tipo = tipo;
     }
 
     public LinkedList<Movimiento> getMovimientos() {
@@ -138,7 +139,8 @@ public class Pokemon {
     public Efectividad comprobarTipos(Pokemon p2) {
         if (this.getTipo() == Tipo.AGUA && p2.getTipo() == Tipo.FUEGO || p2.getTipo() == Tipo.TIERRA)
             return Efectividad.SUPER_EFICAZ;
-        else if (this.getTipo() == Tipo.VOLADOR && (p2.getTipo() == Tipo.TIERRA || p2.getTipo() == Tipo.PLANTA||p2.getTipo()==Tipo.FUEGO))
+        else if (this.getTipo() == Tipo.VOLADOR
+                && (p2.getTipo() == Tipo.TIERRA || p2.getTipo() == Tipo.PLANTA || p2.getTipo() == Tipo.FUEGO))
             return Efectividad.SUPER_EFICAZ;
         else if (this.getTipo() == Tipo.FUEGO && (p2.getTipo() == Tipo.PLANTA))
             return Efectividad.SUPER_EFICAZ;
@@ -146,36 +148,50 @@ public class Pokemon {
             return Efectividad.SUPER_EFICAZ;
         else if (this.getTipo() == Tipo.PLANTA && (p2.getTipo() == Tipo.AGUA))
             return Efectividad.SUPER_EFICAZ;
-        else if (this.getTipo() == Tipo.FUEGO && (p2.getTipo() == Tipo.VOLADOR||(p2.getTipo() == Tipo.ELECTRICO)))
+        else if (this.getTipo() == Tipo.FUEGO && (p2.getTipo() == Tipo.VOLADOR || (p2.getTipo() == Tipo.ELECTRICO)))
             return Efectividad.EFICAZ;
         else if (this.getTipo() == Tipo.AGUA && (p2.getTipo() == Tipo.VOLADOR))
             return Efectividad.EFICAZ;
         else if (this.getTipo() == Tipo.VOLADOR && (p2.getTipo() == Tipo.AGUA))
             return Efectividad.EFICAZ;
-        else if (this.getTipo() == Tipo.ELECTRICO && (p2.getTipo() == Tipo.PLANTA||(p2.getTipo() == Tipo.FUEGO)))
+        else if (this.getTipo() == Tipo.ELECTRICO && (p2.getTipo() == Tipo.PLANTA || (p2.getTipo() == Tipo.FUEGO)))
             return Efectividad.EFICAZ;
-        else if (this.getTipo() == Tipo.PLANTA&& (p2.getTipo() == Tipo.ELECTRICO))
+        else if (this.getTipo() == Tipo.PLANTA && (p2.getTipo() == Tipo.ELECTRICO))
             return Efectividad.EFICAZ;
         return Efectividad.POCO_EFICAZ;
     }
 
-    public int atacar(Pokemon pokemon, Movimiento movimiento) {
-        if (this.comprobarTipos(pokemon) == Efectividad.SUPER_EFICAZ){
-            estamina =estamina-10;
-            pokemon.vitalidad = pokemon.vitalidad; //TODO: aquí va la fórmula 
-        }else if (pokemon.getTipo() == Efectividad.EFICAZ){
-            estamina =estamina-5;
-            pokemon.vitalidad=vitalidad-(pokemon.setAtaque((int)1*pokemon.getAtaque()));
-        }else if(pokemon.getTipo() == Efectividad.POCO_EFICAZ){
-            estamina =estamina-1;
-            pokemon.vitalidad=vitalidad-(pokemon.setAtaque((int)0.5*pokemon.getAtaque()));
-            }
-        movimiento.aplicarMovimiento(pokemon);
-        return 7;
+    // HP = HP -(PotenciaMov + Ataque.this - defensa.rival.pokemon *
+    // efectividadDelTipoMov)
+    /*
+     * if(daño=<0)
+     * daño =1;
+     */
+    public int atacar(Pokemon pokemon, Movimiento mov) {
+        if (this.comprobarTipos(pokemon) == Efectividad.SUPER_EFICAZ) {
+            estamina = estamina - 10;
+
+            pokemon.vitalidad = pokemon.vitalidad
+                    - (Movimiento.getPotenciaAtac() + this.ataque - pokemon.defensa * (int) 1.5);
+            return pokemon.vitalidad;
+        } else if (this.comprobarTipos(pokemon) == Efectividad.EFICAZ) {
+            estamina = estamina - 5;
+            pokemon.vitalidad = pokemon.vitalidad - (Movimiento.getPotenciaAtac() + this.ataque - pokemon.defensa * 1);
+            return pokemon.vitalidad;
+        } else if (this.comprobarTipos(pokemon) == Efectividad.POCO_EFICAZ) {
+            estamina = estamina - 1;
+            pokemon.vitalidad = pokemon.vitalidad
+                    - (Movimiento.getPotenciaAtac() + this.ataque - pokemon.defensa * (int) 0.5);
+            return pokemon.vitalidad;
+        }
+        return pokemon.vitalidad;
     }
-    public void aplicarMejora(Mejora mejora){
-        mejora.aplicarMovimiento(MejoraAtk.class(this));
-    }
+
+    /*
+     * public void aplicarMejora(Mejora mejora){
+     * mejora.aplicarMovimiento(MejoraAtk.class(this));
+     * }
+     */
 
     public int nivelSubid(int expGanada) {
         if (expGanada >= nivel * 10) {
@@ -184,13 +200,19 @@ public class Pokemon {
         } else {
             return nivel;
         }
+    }
 
-        /*
-         * public String toString(){
-         * return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
-         * 
-         * }
-         */
+    public String toString() {
+        return "Nombre Pokemon = " + this.nombre + ", nivel del Pokemon = " + this.nivel + ", vida total = "
+                + this.vitalidad;
 
     }
+
+    /*
+     * public String toString(){
+     * return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
+     * 
+     * }
+     */
+
 }

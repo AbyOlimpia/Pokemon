@@ -7,5 +7,5 @@ public enum Tipo {
     VOLADOR,
     ELECTRICO,
     TIERRA
-    
+
 }
