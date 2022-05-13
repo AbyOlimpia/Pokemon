@@ -8,7 +8,7 @@ public class MySQLconnector {
 
     public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/pokemon";
+        String url = "jdbc:mysql://localhost:3306/pok_mon";
         String login = "root";
         String password = "";
 
@@ -34,6 +34,5 @@ public class MySQLconnector {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 }
