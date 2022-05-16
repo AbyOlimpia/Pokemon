@@ -27,6 +27,8 @@ public class MySQLconnector {
             /**
              * A partir de esta línea la conexión queda establecida, por lo que se puede hacer cualquier insert, select etc...
              */
+
+             insertarPokemon(connection, new Pokemon("Charizard", 1, Tipo.FUEGO, 6));
             try {
                 connection.close();
                 System.out.println("Conexión cerrada");
@@ -41,7 +43,7 @@ public class MySQLconnector {
             e.printStackTrace();
         }
     }
-}
+
 
 
 public static void mostrarPokemon (Connection con) throws SQLException {
@@ -55,7 +57,7 @@ public static void mostrarPokemon (Connection con) throws SQLException {
     while (rs.next()) {
         pokemon.setNumPokedex(rs.getInt("num_pokedex"));
         pokemon.setNomPokemon(rs.getString("nom_pokemon"));
-        pokemon.tipo(rs.getTipo(Tipo));
+        pokemon.setTipo(Tipo.valueOf(rs.getString("tipo")));
 
         System.out.println(pokemon.toString());
         
@@ -63,12 +65,14 @@ public static void mostrarPokemon (Connection con) throws SQLException {
     statement.close();
 
 }
-
+/**
+ * "INSERT INTO POKEDEX(NUM_POKEDEX,NOM_POKEMON, TIPO) VALUES(6,'Charizard','FUEGO')"
+ */
 
 public static void insertarPokemon(Connection con, Pokemon p) throws SQLException {
     String sentencia ="INSERT INTO POKEDEX(NUM_POKEDEX,NOM_POKEMON, TIPO) VALUES("+ p.getNumPokedex()
                                                    +",'"+p.getNombre()
-                                                   +"','"+p.getTipo()
+                                                   +"','"+p.getTipo().toString()
                                                    +"')";
     Statement stmt = null;
     try {

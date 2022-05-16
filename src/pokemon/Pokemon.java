@@ -1,5 +1,6 @@
 package src.pokemon;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.LinkedList;
 
 public class Pokemon {
@@ -22,8 +23,8 @@ public class Pokemon {
 
     }
 
-    public Pokemon(String paramNombre, int nivel, Tipo tipo) {
-        this.nombre = paramNombre;
+    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex) {
+        this.nombre = nom_pokemon;
         this.vitalidad = (int) (Math.random() * 10);
         this.ataque = (int) (Math.random() * 10);
         this.defensa = (int) (Math.random() * 10);
@@ -33,6 +34,7 @@ public class Pokemon {
         this.nivel = 1;
         this.fertilidad = 5;
         this.tipo = tipo;
+        this.numPokedex = num_pokedex;
     }
 
     public LinkedList<Movimiento> getMovimientos() {
@@ -153,7 +155,7 @@ public class Pokemon {
         this.nombre = nomPokemon;
     }
 
-    
+ 
     
 
     public Efectividad comprobarTipos(Pokemon p2) {

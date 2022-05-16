@@ -9,8 +9,8 @@ public class Main {
 
         String arrayMov[] = { "látigo", "rugido", "arañazo", "placaje" };
 
-        Pokemon p1 = new Pokemon("Alejandro", 1, Tipo.FUEGO);
-        Pokemon p2 = new Pokemon("Raichu", 1, Tipo.AGUA);
+        Pokemon p1 = new Pokemon("Alejandro", 1, Tipo.FUEGO, 0);
+        Pokemon p2 = new Pokemon("Raichu", 1, Tipo.AGUA, 0);
 
         System.out.println(p1.comprobarTipos(p2)); 
         //System.out.println(p1.atacar(p2, p1.comprobarTipos(p2)));
