@@ -16,6 +16,11 @@ public class Pokemon {
     private LinkedList<Movimiento> movimientos;
     private Estado estados;
     private Tipo tipo;
+    private int numPokedex;
+
+    public Pokemon(){
+
+    }
 
     public Pokemon(String paramNombre, int nivel, Tipo tipo) {
         this.nombre = paramNombre;
@@ -135,6 +140,21 @@ public class Pokemon {
     public void setVitalidad(int vitalidad) {
         this.vitalidad = vitalidad;
     }
+    
+    public void setNumPokedex (int numPokedex) {
+        this.numPokedex = numPokedex;
+    }
+
+    public int getNumPokedex() {
+        return numPokedex;
+    }
+    
+    public void setNomPokemon (String nomPokemon){
+        this.nombre = nomPokemon;
+    }
+
+    
+    
 
     public Efectividad comprobarTipos(Pokemon p2) {
         if (this.getTipo() == Tipo.AGUA && p2.getTipo() == Tipo.FUEGO || p2.getTipo() == Tipo.TIERRA)

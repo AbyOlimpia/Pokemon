@@ -2,7 +2,13 @@ package src;
 
 import java.io.IOException;
 import java.sql.*;
-import javax.sql.*;
+
+
+
+import src.pokemon.Pokemon;
+import src.pokemon.Tipo;
+
+
 
 public class MySQLconnector {
 
@@ -40,18 +46,18 @@ public class MySQLconnector {
 
 public static void mostrarPokemon (Connection con) throws SQLException {
     String consulta = "SELECT * FROM POKEDEX";
-    Statement statement = com.createStatement();
+    Statement statement = con.createStatement();
     ResultSet rs = statement.executeQuery(consulta);
 
 
-    Pokemon e = null;
+    Pokemon pokemon = new Pokemon();
+    
     while (rs.next()) {
-        e = new Pokemon();
-        e.setNumPokedex(rs.getInt("num_pokedex"));
-        e.setNomPokemon(rs.getString("nom_pokemon"));
-        e.tipo(rs.getString("tipo"));
+        pokemon.setNumPokedex(rs.getInt("num_pokedex"));
+        pokemon.setNomPokemon(rs.getString("nom_pokemon"));
+        pokemon.tipo(rs.getTipo(Tipo));
 
-        System.out.println(e.toString());
+        System.out.println(pokemon.toString());
         
     }
     statement.close();
@@ -60,16 +66,16 @@ public static void mostrarPokemon (Connection con) throws SQLException {
 
 
 public static void insertarPokemon(Connection con, Pokemon p) throws SQLException {
-    String sentencia ="INSERT INTO POKEDEX(NUM_POKEDEX,NOM_POKEMON, TIPO) VALUES("+ p.getnum_Pokedex()
-                                                   +",'"+p.getnom_Pokemon()
-                                                   +"','"+p.gettipo()
+    String sentencia ="INSERT INTO POKEDEX(NUM_POKEDEX,NOM_POKEMON, TIPO) VALUES("+ p.getNumPokedex()
+                                                   +",'"+p.getNombre()
+                                                   +"','"+p.getTipo()
                                                    +"')";
     Statement stmt = null;
     try {
         stmt = con.createStatement();
         stmt.executeUpdate(sentencia);
         
-        System.out.println("Nuevo pokemon insertado. "+p.getNomPokemon());
+        System.out.println("Nuevo pokemon insertado. "+p.getNombre());
     } catch (SQLException e) {
         e.printStackTrace();
     } finally {
