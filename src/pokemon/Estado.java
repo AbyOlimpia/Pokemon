@@ -6,3 +6,4 @@ public enum Estado {
     QUEMADO,
     SIN_ESTADO
 }
+

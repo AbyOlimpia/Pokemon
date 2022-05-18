@@ -7,11 +7,14 @@ public class ListaMov {
 
     public static LinkedList<Movimiento> movimientosAtaque = new LinkedList<>();
     public static LinkedList<Movimiento> movimientosMejora = new LinkedList<>();
+    public static LinkedList<Movimiento> movimientosEstado = new LinkedList<>();
 
     public static void inicializarListasDeMovimientos(){
 
+        //Movimientos de Ataque
+
          movimientosAtaque.add(new MovimientoAtaque("Pistola Agua", Tipo.AGUA, 10, 3));
-         movimientosAtaque.add(new MovimientoAtaque("Surf", Tipo.AGUA, 30, 5);
+         movimientosAtaque.add(new MovimientoAtaque("Surf", Tipo.AGUA, 30, 5));
          movimientosAtaque.add(new MovimientoAtaque("Hidrobomba", Tipo.AGUA, 50, 10));
          movimientosAtaque.add(new MovimientoAtaque("Hidropulso Agua", Tipo.AGUA, 20, 3));
          movimientosAtaque.add(new MovimientoAtaque("Salmuera", Tipo.AGUA, 40, 3));
@@ -41,22 +44,33 @@ public class ListaMov {
          movimientosAtaque.add(new MovimientoAtaque("Vuelo", Tipo.VOLADOR, 40, 3));
          movimientosAtaque.add(new MovimientoAtaque("Pájaro Asado", Tipo.VOLADOR, 50, 3));
 
-         // TODO: Todos estos van dentro de la lista de mejora
+         //Movimientos de Mejora
+
          movimientosMejora.add(new MejoraAtk("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraAtk("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraAtk("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraAtkSpc("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraAtkSpc("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraAtkSpc("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraDef("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraDef("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraDef("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraDefSpc("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraDefSpc("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraDefSpc("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraVel("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraVel("El Afilador", Tipo.ELECTRICO, 3));
-         movimientosMejora.add(new MejoraVel("El Afilador", Tipo.ELECTRICO, 3));
+         movimientosMejora.add(new MejoraAtk("El Tapicero", Tipo.TIERRA, 3));
+         movimientosMejora.add(new MejoraAtk("La Jungla", Tipo.PLANTA, 3));
+         movimientosMejora.add(new MejoraAtkSpc("Clase con Paco", Tipo.AGUA, 3));
+         movimientosMejora.add(new MejoraAtkSpc("Clase con Luis Regino", Tipo.FUEGO, 3));
+         movimientosMejora.add(new MejoraAtkSpc("Piensalo un poco", Tipo.AGUA, 3));
+         movimientosMejora.add(new MejoraDef("Crimpar", Tipo.ELECTRICO, 3));
+         movimientosMejora.add(new MejoraDef("La dobleU", Tipo.FUEGO, 3));
+         movimientosMejora.add(new MejoraDef("El Panadero", Tipo.PLANTA, 3));
+         movimientosMejora.add(new MejoraDefSpc("Push/Pull", Tipo.ELECTRICO, 3));
+         movimientosMejora.add(new MejoraDefSpc("Umbrello", Tipo.FUEGO, 3));
+         movimientosMejora.add(new MejoraDefSpc("Commit", Tipo.VOLADOR, 3));
+         movimientosMejora.add(new MejoraVel("Chocobon", Tipo.TIERRA, 3));
+         movimientosMejora.add(new MejoraVel("Fernando Fariña", Tipo.VOLADOR, 3));
+         movimientosMejora.add(new MejoraVel("Un café rápido", Tipo.FUEGO, 3));
+
+         //Movimientos de Estado
+
+         movimientosEstado.add(new MovEstado("Espora",Tipo.PLANTA, 3, Estado.DORMIDO));
+         movimientosEstado.add(new MovEstado("Fuego Fatuo", Tipo.TIERRA, 3, Estado.QUEMADO));
+         movimientosEstado.add(new MovEstado("Fallo de Voltaje", Tipo.ELECTRICO, 3, Estado.PARALIZADO));
+
+         
+
+
 
 
 
