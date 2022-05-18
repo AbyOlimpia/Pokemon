@@ -2,8 +2,8 @@ package src;
 
 import java.sql.*;
 
-
-
+import src.pokemon.Movimiento;
+import src.pokemon.MovimientoAtaque;
 import src.pokemon.Pokemon;
 import src.pokemon.Tipo;
 
@@ -22,6 +22,7 @@ public class MySQLconnector {
             Connection connection = DriverManager.getConnection(url, login, password);
 
             System.out.println("Conexión establecida con éxito");
+            
 
             /**
              * A partir de esta línea la conexión queda establecida, por lo que se puede hacer cualquier insert, select etc...

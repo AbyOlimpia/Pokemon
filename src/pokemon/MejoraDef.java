@@ -2,8 +2,8 @@ package src.pokemon;
 
 public class MejoraDef extends Movimiento {
 
-    MejoraDef(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
-        super(nombreMov, tipoMov, potenciaAtac, consumEstamina);
+    MejoraDef(String nombreMov, Tipo tipoMov, int consumEstamina) {
+        super(nombreMov, tipoMov, consumEstamina);
     }
 
     /*

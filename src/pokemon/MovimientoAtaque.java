@@ -2,10 +2,10 @@ package src.pokemon;
 
 public class MovimientoAtaque extends Movimiento {
 
-    private int potenciaAtaq;
+    private static int potenciaAtaq;
 
-    MovimientoAtaque(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
-        super(nombreMov, tipoMov, potenciaAtac, consumEstamina);
+    public MovimientoAtaque(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
+        super(nombreMov, tipoMov, potenciaAtac);
         // TODO Auto-generated constructor stub
     }
 
@@ -34,12 +34,12 @@ public class MovimientoAtaque extends Movimiento {
 
     }
 
-    public int getPotenciaAtaq() {
+    public static int getPotenciaAtaq() {
         return potenciaAtaq;
     }
 
     public void setPotenciaAtaq(int potenciaAtaq) {
-        this.potenciaAtaq = potenciaAtaq;
+        MovimientoAtaque.potenciaAtaq = potenciaAtaq;
     }
 
     @Override
@@ -65,6 +65,7 @@ public class MovimientoAtaque extends Movimiento {
         // TODO Auto-generated method stub
         super.setTipoMov(tipoMov);
     }
+
 
     /*
      * @Override

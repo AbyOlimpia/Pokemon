@@ -1,6 +1,4 @@
 package src.pokemon;
-
-import java.io.ObjectInputStream.GetField;
 import java.util.LinkedList;
 
 public class Pokemon {
@@ -194,16 +192,16 @@ public class Pokemon {
             estamina = estamina - 10;
 
             pokemon.vitalidad = pokemon.vitalidad
-                    - (Movimiento.getPotenciaAtac() + this.ataque - pokemon.defensa * (int) 1.5);
+                    - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * (int) 1.5);
             return pokemon.vitalidad;
         } else if (this.comprobarTipos(pokemon) == Efectividad.EFICAZ) {
             estamina = estamina - 5;
-            pokemon.vitalidad = pokemon.vitalidad - (Movimiento.getPotenciaAtac() + this.ataque - pokemon.defensa * 1);
+            pokemon.vitalidad = pokemon.vitalidad - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * 1);
             return pokemon.vitalidad;
         } else if (this.comprobarTipos(pokemon) == Efectividad.POCO_EFICAZ) {
             estamina = estamina - 1;
             pokemon.vitalidad = pokemon.vitalidad
-                    - (Movimiento.getPotenciaAtac() + this.ataque - pokemon.defensa * (int) 0.5);
+                    - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * (int) 0.5);
             return pokemon.vitalidad;
         }
         return pokemon.vitalidad;

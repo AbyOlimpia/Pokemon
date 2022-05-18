@@ -16,11 +16,10 @@ public abstract class Movimiento {
      * daño =1;
      */
 
-    Movimiento(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
+    public Movimiento(String nombreMov, Tipo tipoMov, int consumEstamina) {
         String[] arrayMov = { "nombre", "del", "mov", "pok" };
         this.nombreMov = nombreMov;
         this.tipoMov = tipoMov;
-        this.potenciaAtac = potenciaAtac;
         this.consumEstamina = consumEstamina;
     }
 
@@ -35,10 +34,6 @@ public abstract class Movimiento {
     public String getNombreMov() {
         return nombreMov;
 
-    }
-
-    public static int getPotenciaAtac() {
-        return potenciaAtac;
     }
 
     public Tipo getTipoMov() {
@@ -62,7 +57,4 @@ public abstract class Movimiento {
         this.tipoMov = tipoMov;
     }
 
-    public static void setPotenciaAtac(int potenciaAtac) {
-        Movimiento.potenciaAtac = potenciaAtac;
-    }
 }

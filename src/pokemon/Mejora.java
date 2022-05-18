@@ -6,8 +6,8 @@ public abstract class Mejora extends Movimiento {
     private String tipoMejora;
     private int cantMejora;
 
-    Mejora(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
-        super(nombreMov, tipoMov, potenciaAtac, consumEstamina);
+    Mejora(String nombreMov, Tipo tipoMov, int consumEstamina) {
+        super(nombreMov, tipoMov, consumEstamina);
     }
 
     @Override
