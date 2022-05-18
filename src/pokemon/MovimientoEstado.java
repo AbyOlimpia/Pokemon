@@ -5,8 +5,8 @@ public class MovimientoEstado extends Movimiento {
     private Estado estado;
     private int numTurnos;
 
-    MovimientoEstado(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
-        super(nombreMov, tipoMov, potenciaAtac, consumEstamina);
+    MovimientoEstado(String nombreMov, Tipo tipoMov, int consumEstamina) {
+        super(nombreMov, tipoMov, consumEstamina);
     }
 
     @Override

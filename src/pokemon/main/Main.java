@@ -18,9 +18,15 @@ public class Main {
         ListaMov.inicializarListasDeMovimientos();
 
         LinkedList<Movimiento> listaMovimientosPkmnJugador = new LinkedList<>();
-        listaMovimientosPkmnJugador.add(ListaMov.devolverListaAtaques().get());
+        listaMovimientosPkmnJugador.add(ListaMov.devolverMovimientoRandom(ListaMov.movimientosAtaque, ListaMov.movimientosMejora));
+        
+        /*listaMovimientosPkmnJugador.add(ListaMov.devolverMovimientoRandom());
+        listaMovimientosPkmnJugador.add(ListaMov.devolverMovimientoRandom());
+        listaMovimientosPkmnJugador.add(ListaMov.devolverMovimientoRandom());*/
 
         p1.setMovimientos(listaMovimientosPkmnJugador);
+
+        System.out.println("tu lista de movimientos es "+ listaMovimientosPkmnJugador);
 
       
 

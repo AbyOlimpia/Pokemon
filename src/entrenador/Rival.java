@@ -6,5 +6,15 @@ public class Rival extends Entrenador {
         super(paramNombre);
         
     }
+    @Override
+    public String getNombre() {
+        // TODO Auto-generated method stub
+        return super.getNombre();
+    }
+    @Override
+    public int getPokedollar() {
+        // TODO Auto-generated method stub
+        return super.getPokedollar();
+    }
     
 }

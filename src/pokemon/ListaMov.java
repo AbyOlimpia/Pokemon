@@ -11,7 +11,7 @@ public class ListaMov {
     public static void inicializarListasDeMovimientos(){
 
          movimientosAtaque.add(new MovimientoAtaque("Pistola Agua", Tipo.AGUA, 10, 3));
-         movimientosAtaque.add(new MovimientoAtaque("Surf", Tipo.AGUA, 30, 5);
+         movimientosAtaque.add(new MovimientoAtaque("Surf", Tipo.AGUA, 30, 5));
          movimientosAtaque.add(new MovimientoAtaque("Hidrobomba", Tipo.AGUA, 50, 10));
          movimientosAtaque.add(new MovimientoAtaque("Hidropulso Agua", Tipo.AGUA, 20, 3));
          movimientosAtaque.add(new MovimientoAtaque("Salmuera", Tipo.AGUA, 40, 3));
@@ -58,14 +58,6 @@ public class ListaMov {
          movimientosMejora.add(new MejoraVel("El Afilador", Tipo.ELECTRICO, 3));
          movimientosMejora.add(new MejoraVel("El Afilador", Tipo.ELECTRICO, 3));
 
-
-
-         
-
-
-
-
-
     }
 
     public static LinkedList<Movimiento> devolverListaAtaques() {
@@ -76,9 +68,10 @@ public class ListaMov {
         return movimientosMejora;
     }
 
-    public static Movimiento devolverMovimientoRandom() {
+    public static Movimiento devolverMovimientoRandom(LinkedList<Movimiento> movimientosAtaque, LinkedList<Movimiento> movimientosMejora ) {
         Random rnd = new Random();
         int indice = rnd.nextInt(movimientosAtaque.size());
+        int index =rnd.nextInt(movimientosMejora.size());
         return movimientosAtaque.get(indice);
     }
 
