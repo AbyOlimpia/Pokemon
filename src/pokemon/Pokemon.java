@@ -233,7 +233,6 @@ public class Pokemon {
     public int atacar(Pokemon pokemon, Movimiento mov) {
         if (this.comprobarTipos(pokemon) == Efectividad.SUPER_EFICAZ) {
             estamina = estamina - 10;
-
             pokemon.vitalidad = pokemon.vitalidad
                     - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * (int) 1.5);
             return pokemon.vitalidad;

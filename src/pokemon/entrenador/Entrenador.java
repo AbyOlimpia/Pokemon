@@ -10,7 +10,7 @@ import src.pokemon.Pokemon;
 public class Entrenador {
     private String nombre;
     private int pokedollar;
-    // private LinkedList<Pokedex> pokemon;
+    //private LinkedList<Pokedex> pokemon;
 
     Entrenador(String paramNombre) {
         this.nombre = paramNombre;
