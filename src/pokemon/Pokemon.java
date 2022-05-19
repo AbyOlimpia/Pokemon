@@ -34,7 +34,7 @@ public class Pokemon {
      * @param num_pokedex
      */
 
-    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex) {
+    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex, LinkedList<Movimiento> movimientos) {
         this.nombre = nom_pokemon;
         this.vitalidad = (int) (Math.random() * 10);
         this.ataque = (int) (Math.random() * 10);
@@ -46,6 +46,7 @@ public class Pokemon {
         this.fertilidad = 5;
         this.tipo = tipo;
         this.numPokedex = num_pokedex;
+        movimientos = new LinkedList<>();
     }
 
     /**
@@ -259,6 +260,14 @@ public class Pokemon {
         } else {
             return nivel;
         }
+    }
+
+    public void mostrarMov(LinkedList<Movimiento> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).getNombreMov());
+
+        }
+
     }
 
     public String toString() {

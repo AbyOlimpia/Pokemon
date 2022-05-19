@@ -96,9 +96,15 @@ public class ListaMov {
      * @return
      */
 
-    public static Movimiento devolverMovimientoRandom() {
+    public static Movimiento devolverMovimientoRandomAtaque() {
         Random rnd = new Random();
         int indice = rnd.nextInt(movimientosAtaque.size());
+        return movimientosAtaque.get(indice);
+    }
+
+    public static Movimiento devolverMovimientoRandomMejora() {
+        Random rnd = new Random();
+        int indice = rnd.nextInt(movimientosMejora.size());
         return movimientosAtaque.get(indice);
     }
 

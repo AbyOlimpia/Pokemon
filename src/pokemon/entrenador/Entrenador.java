@@ -1,4 +1,6 @@
-package src.entrenador;
+package src.pokemon.entrenador;
+
+import java.util.LinkedList;
 
 /**
  * @author @AbyOlimpia @AlexCesur
@@ -8,6 +10,7 @@ import src.pokemon.Pokemon;
 public class Entrenador {
     private String nombre;
     private int pokedollar;
+    //private LinkedList<Pokedex> pokemon;
 
     Entrenador(String paramNombre) {
         this.nombre = paramNombre;

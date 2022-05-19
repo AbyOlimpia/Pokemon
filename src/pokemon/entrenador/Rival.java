@@ -1,4 +1,4 @@
-package src.entrenador;
+package src.pokemon.entrenador;
 
 public class Rival extends Entrenador {
 
