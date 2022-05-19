@@ -20,6 +20,7 @@ public class Pokemon {
     private Estado estados;
     private Tipo tipo;
     private int numPokedex;
+    private int velocidad;
 
     public Pokemon() {
 
@@ -34,7 +35,8 @@ public class Pokemon {
      * @param num_pokedex
      */
 
-    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex, LinkedList<Movimiento> movimientos) {
+    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex, int velocidad,
+            LinkedList<Movimiento> movimientos) {
         this.nombre = nom_pokemon;
         this.vitalidad = (int) (Math.random() * 10);
         this.ataque = (int) (Math.random() * 10);
@@ -47,6 +49,7 @@ public class Pokemon {
         this.tipo = tipo;
         this.numPokedex = num_pokedex;
         movimientos = new LinkedList<>();
+        this.velocidad = velocidad;
     }
 
     /**
@@ -171,6 +174,14 @@ public class Pokemon {
 
     public void setNomPokemon(String nomPokemon) {
         this.nombre = nomPokemon;
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
     }
 
     /**
