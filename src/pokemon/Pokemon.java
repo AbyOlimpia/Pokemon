@@ -1,5 +1,6 @@
 package src.pokemon;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Pokemon {
     private String nombre;
@@ -21,7 +22,7 @@ public class Pokemon {
 
     }
 
-    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex) {
+    public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex, LinkedList<Movimiento> movimientos) {
         this.nombre = nom_pokemon;
         this.vitalidad = (int) (Math.random() * 10);
         this.ataque = (int) (Math.random() * 10);
@@ -33,6 +34,8 @@ public class Pokemon {
         this.fertilidad = 5;
         this.tipo = tipo;
         this.numPokedex = num_pokedex;
+
+        movimientos = new LinkedList<>();
     }
 
     public LinkedList<Movimiento> getMovimientos() {
@@ -100,8 +103,7 @@ public class Pokemon {
         this.ataqueSp = ataqueSp;
     }
 
-    public void setDefensa(int defensa) {
-        this.defensa = defensa;
+    public static void setDefensa(int defensa) {
     }
 
     public void setDefensaSp(int defensaSp) {
@@ -181,6 +183,7 @@ public class Pokemon {
         return Efectividad.POCO_EFICAZ;
     }
 
+
     // HP = HP -(PotenciaMov + Ataque.this - defensa.rival.pokemon *
     // efectividadDelTipoMov)
     /*
@@ -228,11 +231,22 @@ public class Pokemon {
 
     }
 
-    /*
-     * public String toString(){
-     * return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
-     * 
-     * }
-     */
+    public void mostrarMov(LinkedList<Movimiento> list ){
+        for(int i = 0; i<list.size();i++){
+            System.out.println(list.get(i).getNombreMov());
+
+        }      
+    
+    }
+    
+    
+
+    /*@Override
+      public String toString(){
+      return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
+     
+      }*/
+     
 
 }
+

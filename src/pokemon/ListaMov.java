@@ -68,11 +68,17 @@ public class ListaMov {
         return movimientosMejora;
     }
 
-    public static Movimiento devolverMovimientoRandom(LinkedList<Movimiento> movimientosAtaque, LinkedList<Movimiento> movimientosMejora ) {
+    public static Movimiento devolverMovimientoRandomAtaque() {
         Random rnd = new Random();
         int indice = rnd.nextInt(movimientosAtaque.size());
-        int index =rnd.nextInt(movimientosMejora.size());
         return movimientosAtaque.get(indice);
     }
+
+    public static Movimiento devolverMovimientoRandomMejora() {
+        Random rnd = new Random();
+        int indice =rnd.nextInt(movimientosMejora.size());
+        return movimientosAtaque.get(indice);
+    }
+
 
 }

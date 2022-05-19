@@ -1,4 +1,4 @@
-package src.entrenador;
+package src.pokemon.entrenador;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import src.pokemon.Pokemon;
 
 public class Jugador extends Entrenador{
 
-    Jugador(String paramNombre) {
+    public Jugador(String paramNombre) {
         super(paramNombre);
         
     }
@@ -25,7 +25,7 @@ public class Jugador extends Entrenador{
         return super.getPokedollar();
     }
 
-    public void moverPokemon( List<Pokemon> equipoJugador){
+    /*public void moverPokemon( List<Pokemon> equipoJugador){
         List<Pokemon> cajaPokemon = new ArrayList<>();
         Scanner s = new Scanner(System.in);
         System.out.println("Cuál Pokimon quieres cambiar?: ");
@@ -45,7 +45,7 @@ public class Jugador extends Entrenador{
 
         System.out.println("Ahora tu equipo de Pokimons es: "+equipoJugador);
 
-    }
+    }*/
     public void moverPokemon( Array[] equipoJugador){
         Array[] cajaPokemon = new Array[4];
         Scanner s = new Scanner(System.in);
@@ -63,8 +63,8 @@ public class Jugador extends Entrenador{
         else if(numPokemon==3){
             equipoJugador[3]=cajaPokemon[3];
         }
-
-        System.out.println("Ahora tu equipo de Pokimons es: "+equipoJugador);
+        
+    
 
     }
     
