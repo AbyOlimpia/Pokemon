@@ -1,6 +1,10 @@
 package src.pokemon;
+
 import java.util.LinkedList;
 
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
 public class Pokemon {
     private String nombre;
     private String mote;
@@ -17,9 +21,18 @@ public class Pokemon {
     private Tipo tipo;
     private int numPokedex;
 
-    public Pokemon(){
+    public Pokemon() {
 
     }
+
+    /**
+     * Constructor con los parámetros necesarios para crear un pokémon
+     * 
+     * @param nom_pokemon
+     * @param nivel
+     * @param tipo
+     * @param num_pokedex
+     */
 
     public Pokemon(String nom_pokemon, int nivel, Tipo tipo, int num_pokedex) {
         this.nombre = nom_pokemon;
@@ -35,6 +48,12 @@ public class Pokemon {
         this.numPokedex = num_pokedex;
     }
 
+    /**
+     * return de LinkedList para obtener toda la lista de movimientos
+     * Todos los getters y setters
+     * 
+     * @return
+     */
     public LinkedList<Movimiento> getMovimientos() {
         return movimientos;
     }
@@ -140,21 +159,25 @@ public class Pokemon {
     public void setVitalidad(int vitalidad) {
         this.vitalidad = vitalidad;
     }
-    
-    public void setNumPokedex (int numPokedex) {
+
+    public void setNumPokedex(int numPokedex) {
         this.numPokedex = numPokedex;
     }
 
     public int getNumPokedex() {
         return numPokedex;
     }
-    
-    public void setNomPokemon (String nomPokemon){
+
+    public void setNomPokemon(String nomPokemon) {
         this.nombre = nomPokemon;
     }
 
- 
-    
+    /**
+     * Método para identificar la efectividad del ataque
+     * 
+     * @param p2
+     * @return
+     */
 
     public Efectividad comprobarTipos(Pokemon p2) {
         if (this.getTipo() == Tipo.AGUA && p2.getTipo() == Tipo.FUEGO || p2.getTipo() == Tipo.TIERRA)
@@ -187,6 +210,14 @@ public class Pokemon {
      * if(daño=<0)
      * daño =1;
      */
+
+    /**
+     * Ajuste de ataque si es Super Eficaz, Eficaz o Poco Eficaz
+     * 
+     * @param pokemon
+     * @param mov
+     * @return
+     */
     public int atacar(Pokemon pokemon, Movimiento mov) {
         if (this.comprobarTipos(pokemon) == Efectividad.SUPER_EFICAZ) {
             estamina = estamina - 10;
@@ -196,7 +227,8 @@ public class Pokemon {
             return pokemon.vitalidad;
         } else if (this.comprobarTipos(pokemon) == Efectividad.EFICAZ) {
             estamina = estamina - 5;
-            pokemon.vitalidad = pokemon.vitalidad - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * 1);
+            pokemon.vitalidad = pokemon.vitalidad
+                    - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * 1);
             return pokemon.vitalidad;
         } else if (this.comprobarTipos(pokemon) == Efectividad.POCO_EFICAZ) {
             estamina = estamina - 1;
@@ -211,6 +243,13 @@ public class Pokemon {
      * public void aplicarMejora(Mejora mejora){
      * mejora.aplicarMovimiento(MejoraAtk.class(this));
      * }
+     */
+
+    /**
+     * Método para subir el nivel
+     * 
+     * @param expGanada
+     * @return
      */
 
     public int nivelSubid(int expGanada) {

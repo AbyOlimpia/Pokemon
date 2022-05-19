@@ -1,15 +1,28 @@
 package src.pokemon;
 
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
 public abstract class Mejora extends Movimiento {
 
     private int numEfecto;
     private String tipoMejora;
     private int cantMejora;
 
+    /**
+     * Constructor para las mejoras heredado de movimiento
+     * 
+     * @param nombreMov
+     * @param tipoMov
+     * @param consumEstamina
+     */
     Mejora(String nombreMov, Tipo tipoMov, int consumEstamina) {
         super(nombreMov, tipoMov, consumEstamina);
     }
 
+    /**
+     * setters y getters
+     */
     @Override
     public int getConsumEstamina() {
         return super.getConsumEstamina();

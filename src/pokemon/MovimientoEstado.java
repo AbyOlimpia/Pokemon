@@ -1,11 +1,23 @@
 package src.pokemon;
 
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
 public class MovimientoEstado extends Movimiento {
 
     private Estado estado;
     private int numTurnos;
 
-    MovimientoEstado(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
+    /**
+     * Constructor heredado de movimiento para saber el nombre, el tipo y el consumo
+     * de estamina
+     * 
+     * @param nombreMov
+     * @param tipoMov
+     * @param potenciaAtac
+     * @param consumEstamina
+     */
+    MovimientoEstado(String nombreMov, Tipo tipoMov, int consumEstamina) {
         super(nombreMov, tipoMov, consumEstamina);
     }
 

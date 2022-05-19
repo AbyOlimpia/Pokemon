@@ -1,5 +1,8 @@
 package src.entrenador;
 
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
 import src.pokemon.Pokemon;
 
 public class Entrenador {
@@ -22,6 +25,7 @@ public class Entrenador {
     /**
      * Con este método mejoramos la defensa, la defensa especial y la vitalidad
      * Con un coste de (20 * el nivel del pokemon a mejorar) Pokedóllares
+     * 
      * @param pokemon
      */
     public void entrenamientoPesado(Pokemon pokemon) {
@@ -32,8 +36,9 @@ public class Entrenador {
     }
 
     /**
-     * Con este método mejoramos el ataque, el ataque especial y la vitalidad 
+     * Con este método mejoramos el ataque, el ataque especial y la vitalidad
      * Con un coste de (30 * el nivel del pokemon a mejorar) Pokedóllares
+     * 
      * @param pokemon
      */
     public void entrenamientoFurioso(Pokemon pokemon) {

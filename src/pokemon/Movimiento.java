@@ -16,6 +16,14 @@ public abstract class Movimiento {
      * daño =1;
      */
 
+    /**
+     * Constructor con los parámetros necesarios para los movimientos
+     * 
+     * @param nombreMov
+     * @param tipoMov
+     * @param consumEstamina
+     */
+
     public Movimiento(String nombreMov, Tipo tipoMov, int consumEstamina) {
         String[] arrayMov = { "nombre", "del", "mov", "pok" };
         this.nombreMov = nombreMov;
@@ -23,6 +31,11 @@ public abstract class Movimiento {
         this.consumEstamina = consumEstamina;
     }
 
+    /**
+     * Getters y Setters
+     * 
+     * @return
+     */
     public int getConsumEstamina() {
         return consumEstamina;
     }

@@ -1,14 +1,29 @@
 package src.pokemon;
 
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
 public class MovimientoAtaque extends Movimiento {
 
     private static int potenciaAtaq;
 
+    /**
+     * Constructor heredado de Movimiento, que tiene el nombre del movimiento, el
+     * tipo, la potencia y el consumo de estamina
+     * 
+     * @param nombreMov
+     * @param tipoMov
+     * @param potenciaAtac
+     * @param consumEstamina
+     */
     public MovimientoAtaque(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
         super(nombreMov, tipoMov, potenciaAtac);
         // TODO Auto-generated constructor stub
     }
 
+    /**
+     * Todos los getters y setters
+     */
     @Override
     public int getConsumEstamina() {
 
@@ -65,7 +80,6 @@ public class MovimientoAtaque extends Movimiento {
         // TODO Auto-generated method stub
         super.setTipoMov(tipoMov);
     }
-
 
     /*
      * @Override

@@ -1,5 +1,8 @@
 package src.pokemon;
 
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -7,11 +10,18 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Lista con los turnos y el path donde escribir el Log
+ */
 public class Combate {
     private List<Turno> Turnos;
     public static final String PATH = "./log/combate.log";
 
-    public Combate(){
+    /**
+     * Método para obtener y añadir turnos
+     */
+
+    public Combate() {
         Turnos = new LinkedList<>();
 
     }
@@ -19,12 +29,17 @@ public class Combate {
     public List<Turno> getTurnos() {
         return Turnos;
     }
-    public void addTurno (Turno t){
+
+    public void addTurno(Turno t) {
         this.Turnos.add(t);
     }
-    
-    public void escribirCombate(){
-        File fichero = new File(PATH); 
+
+    /**
+     * Método para escribir el combate en el log
+     */
+
+    public void escribirCombate() {
+        File fichero = new File(PATH);
         try {
             FileWriter fw = new FileWriter(fichero);
             BufferedWriter bw = new BufferedWriter(fw);
