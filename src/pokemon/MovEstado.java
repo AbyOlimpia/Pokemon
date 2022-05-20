@@ -2,6 +2,7 @@ package src.pokemon;
 
 public class MovEstado extends Movimiento {
     private int turnos;
+    private Estado estado;
 
     /**
      * Constructor heredado de movimiento, con el nombre del movimiento, el tipo, el
@@ -15,6 +16,7 @@ public class MovEstado extends Movimiento {
     public MovEstado(String nombreMov, Tipo tipoMov, int consumEstamina, Estado estado, int turnos) {
         super(nombreMov, tipoMov, consumEstamina);
         this.turnos=turnos;
+        this.estado = estado;
         setConsumEstamina(turnos * 10);
 
     }
@@ -42,6 +44,11 @@ public class MovEstado extends Movimiento {
     public Tipo getTipoMov() {
         return super.getTipoMov();
     }
+    public Estado getEstado() {
+        return estado;
+    }public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 
     @Override
     public void setConsumEstamina(int consumEstamina) {
@@ -60,8 +67,9 @@ public class MovEstado extends Movimiento {
 
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-    pokemon.setEstado(ListaMov.movimientosEstado);
+    pokemon.setEstado(this.estado);
         
     }
 
 }
+

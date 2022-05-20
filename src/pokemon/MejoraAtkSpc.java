@@ -1,29 +1,26 @@
-package src.mejora;
-
-import src.pokemon.Movimiento;
-import src.pokemon.Pokemon;
-import src.pokemon.Tipo;
+package src.pokemon;
 
 /**
  * @author @AbyOlimpia @AlexCesur
  */
-public class MejoraDefSpc extends Movimiento {
+public class MejoraAtkSpc extends Movimiento {
 
     /**
-     * Constructor que hereda de movimiento, con el nombre del movimiento, el tipo y
+     * Constructor heredado de movimiento, con el nombre del movimiento, el tipo y
      * el consumo de estamina
      * 
      * @param nombreMov
      * @param tipoMov
      * @param consumEstamina
      */
-    MejoraDefSpc(String nombreMov, Tipo tipoMov, int consumEstamina) {
+    MejoraAtkSpc(String nombreMov, Tipo tipoMov, int consumEstamina) {
         super(nombreMov, tipoMov, consumEstamina);
     }
 
     /**
-     * Setters y Getters
+     * Setters y getters
      */
+    
     @Override
     public int getConsumEstamina() {
         // TODO Auto-generated method stub
@@ -41,39 +38,34 @@ public class MejoraDefSpc extends Movimiento {
         // TODO Auto-generated method stub
         return super.getTipoMov();
     }
-
-    @Override
-    public void setConsumEstamina(int consumEstamina) {
-        super.setConsumEstamina(consumEstamina);
-    }
-
     @Override
     public void setNombreMov(String nombreMov) {
+        // TODO Auto-generated method stub
         super.setNombreMov(nombreMov);
     }
 
     @Override
-    public void setTipoMov(Tipo tipoMov) {
-        super.setTipoMov(tipoMov);
-    }
-
-    public static int setDefensaSp(int i) {
-        return i;
-    }
-
-    public void aplicarMejoraDefSpc(Pokemon pokemon){
-        
-
+    public void setConsumEstamina(int consumEstamina) {
+        // TODO Auto-generated method stub
+        super.setConsumEstamina(consumEstamina);
     }
 
     @Override
-    public void aplicarMovimiento(Pokemon pokemon) {
-        pokemon.setDefensaSp(MejoraDefSpc.setDefensaSp(pokemon.getDefensaSp()+5));
-        
+    public void setTipoMov(Tipo tipoMov) {
+        // TODO Auto-generated method stub
+        super.setTipoMov(tipoMov);
     }
 
-    public static int setVelocidad(int i) {
-        return 0;
+
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+    pokemon.setAtaqueSp(MejoraAtkSpc.setAtaqueSp(pokemon.getAtaqueSp()+5));    
     }
+
+    private static int setAtaqueSp(int i) {
+        return i;
+    }
+    
+     
 
 }

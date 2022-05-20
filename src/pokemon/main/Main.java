@@ -10,7 +10,7 @@ import src.pokemon.entrenador.Jugador;
 public class Main {
     public static void main(String[] args) {
         
-        switch()
+        //creacion de switch()
 
 
         Jugador j1 = new Jugador("ª");
@@ -38,7 +38,7 @@ public class Main {
         //p1.atacar(p2, listaMovimientosPkmnJugador);
         System.out.println(p2.getVitalidad());
 
-        p1.atacar(p2, 0);
+        //p1.atacar(p2, 0);
         
         
         

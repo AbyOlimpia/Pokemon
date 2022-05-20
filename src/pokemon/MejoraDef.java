@@ -1,8 +1,4 @@
-package src.mejora;
-
-import src.pokemon.Movimiento;
-import src.pokemon.Pokemon;
-import src.pokemon.Tipo;
+package src.pokemon;
 
 /**
  * @author @AbyOlimpia @AlexCesur

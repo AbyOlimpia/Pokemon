@@ -6,11 +6,6 @@ package src.pokemon;
 import java.util.LinkedList;
 import java.util.Random;
 
-import src.mejora.MejoraAtkSpc;
-import src.mejora.MejoraDef;
-import src.mejora.MejoraDefSpc;
-import src.mejora.MejoraVel;
-
 public class ListaMov {
 
     /**
@@ -57,9 +52,9 @@ public class ListaMov {
 
         // Movimientos de Mejora
 
-        movimientosMejora.add(new MejoraAtk("El Afilador", Tipo.ELECTRICO, 3));
-        movimientosMejora.add(new MejoraAtk("El Tapicero", Tipo.TIERRA, 3));
-        movimientosMejora.add(new MejoraAtk("La Jungla", Tipo.PLANTA, 3));
+        movimientosMejora.add(new MejoraAtk("El Afilador", Tipo.ELECTRICO, 3, MejorasH.ATAQUE, 0));
+        movimientosMejora.add(new MejoraAtk("El Tapicero", Tipo.TIERRA, 3, null, 0));
+        movimientosMejora.add(new MejoraAtk("La Jungla", Tipo.PLANTA, 3, null, 0));
         movimientosMejora.add(new MejoraAtkSpc("Clase con Paco", Tipo.AGUA, 3));
         movimientosMejora.add(new MejoraAtkSpc("Clase con Luis Regino", Tipo.FUEGO, 3));
         movimientosMejora.add(new MejoraAtkSpc("Piensalo un poco", Tipo.AGUA, 3));
@@ -75,9 +70,9 @@ public class ListaMov {
 
         // Movimientos de Estado
 
-        movimientosEstado.add(new MovEstado("Espora", Tipo.PLANTA, 3, Estado.DORMIDO));
-        movimientosEstado.add(new MovEstado("Fuego Fatuo", Tipo.TIERRA, 3, Estado.QUEMADO));
-        movimientosEstado.add(new MovEstado("Fallo de Voltaje", Tipo.ELECTRICO, 3, Estado.PARALIZADO));
+        movimientosEstado.add(new MovEstado("Espora", Tipo.PLANTA, 3, Estado.DORMIDO, 0));
+        movimientosEstado.add(new MovEstado("Fuego Fatuo", Tipo.TIERRA, 3, Estado.QUEMADO, 0));
+        movimientosEstado.add(new MovEstado("Fallo de Voltaje", Tipo.ELECTRICO, 3, Estado.PARALIZADO, 0));
 
     }
 
@@ -108,6 +103,11 @@ public class ListaMov {
     }
 
     public static Movimiento devolverMovimientoRandomMejora() {
+        Random rnd = new Random();
+        int indice = rnd.nextInt(movimientosMejora.size());
+        return movimientosAtaque.get(indice);
+    }
+    public static Movimiento devolverMovimientoRandomEstado() {
         Random rnd = new Random();
         int indice = rnd.nextInt(movimientosMejora.size());
         return movimientosAtaque.get(indice);

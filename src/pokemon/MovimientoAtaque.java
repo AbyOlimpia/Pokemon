@@ -76,6 +76,8 @@ public class MovimientoAtaque extends Movimiento {
         else
             pokemon.setVitalidad(pokemon.getVitalidad() - potenciaAtaq);
     }
+    //formula pokemon
+    //comparar tipo movimiento y tipo rival.geTipo
 
     
 

@@ -13,8 +13,11 @@ public class MejoraAtk extends Mejora {
      * @param tipoMov
      * @param consumEstamina
      */
-    MejoraAtk(String nombreMov, Tipo tipoMov, int consumEstamina) {
-        super(nombreMov, tipoMov, consumEstamina, mejoraEstadisticas);
+    
+
+    MejoraAtk(String nombreMov, Tipo tipoMov, int consumEstamina, MejorasH mejoraEstadiscticas, int cantMejora) {
+        super(nombreMov, tipoMov, consumEstamina, mejoraEstadiscticas, cantMejora);
+        
     }
 
     /**

@@ -1,6 +1,7 @@
 package src.pokemon;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * @author @AbyOlimpia @AlexCesur
@@ -48,8 +49,14 @@ public class Pokemon {
         this.fertilidad = 5;
         this.tipo = tipo;
         this.numPokedex = num_pokedex;
-        movimientos = new LinkedList<>();
         this.velocidad = velocidad;
+        movimientos = new LinkedList<>();
+        movimientos.add(ListaMov.devolverMovimientoRandomAtaque());
+        movimientos.add(ListaMov.devolverMovimientoRandomAtaque());
+        movimientos.add(ListaMov.devolverMovimientoRandomMejora());
+        movimientos.add(ListaMov.devolverMovimientoRandomEstado());
+    
+        
     }
 
     /**
@@ -219,21 +226,17 @@ public class Pokemon {
      * @param listaMovimientosPkmnJugador
      * @return
      */
-    public float atacar(Pokemon pokemon, int posicionAtaque) {
-        for(int i =0;i<movimientos.size();i++){
-        if(posicionAtaque == i){
-             movimientos.get(i);
-        }
+    public void atacar(Pokemon pokemonRival, Movimiento movimiento) {
+        //comrpobacion de los tipos de pokemons 
+        //aplicarmovimiento 
         
+    
+
         
-        
-            /*Movimiento movimiento = this.getMovimientos().get(posicionAtaque);
-        movimiento.aplicarMovimiento(pokemon);*/
-        
-        
-        }
-        return posicionAtaque;
     }
+
+
+
 
 
 
@@ -244,14 +247,14 @@ public class Pokemon {
      * @return
      */
 
-    public int nivelSubid(int expGanada) {
+   public int nivelSubid(int expGanada) {
+       //set de vitalidad y demas stats
         if (expGanada >= nivel * 10) {
             nivel++;
-            return nivel;
-        } else {
-            return nivel;
+            
+        } return nivel;
         }
-    }
+    
 
     public void mostrarMov(LinkedList<Movimiento> list) {
         for (int i = 0; i < list.size(); i++) {

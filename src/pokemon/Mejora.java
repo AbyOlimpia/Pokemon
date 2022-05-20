@@ -8,7 +8,7 @@ public class Mejora extends Movimiento {
     private int numEfecto;
     private String tipoMejora;
     private int cantMejora;
-    private MejorasH mejoraEstadisticas;
+    protected MejorasH mejoraEstadisticas;
 
     /**
      * Constructor para las mejoras heredado de movimiento

@@ -3,27 +3,26 @@ package src.pokemon;
 /**
  * @author @AbyOlimpia @AlexCesur
  */
-public class MovimientoEstado extends Movimiento {
-
-    private Estado estado;
-    private int numTurnos;
+public class MejoraVel extends Movimiento {
 
     /**
-     * Constructor heredado de movimiento para saber el nombre, el tipo y el consumo
-     * de estamina
+     * Constructor que hereda de Movimiento, con el nombre del movimiento, el tipo y
+     * el consumo de estamina
      * 
      * @param nombreMov
      * @param tipoMov
-     * @param potenciaAtac
      * @param consumEstamina
      */
-    MovimientoEstado(String nombreMov, Tipo tipoMov, int consumEstamina) {
+    MejoraVel(String nombreMov, Tipo tipoMov, int consumEstamina) {
         super(nombreMov, tipoMov, consumEstamina);
     }
 
+    /**
+     * setters y getters
+     */
+
     @Override
     public int getConsumEstamina() {
-
         return super.getConsumEstamina();
     }
 
@@ -35,22 +34,6 @@ public class MovimientoEstado extends Movimiento {
     @Override
     public Tipo getTipoMov() {
         return super.getTipoMov();
-    }
-
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public int getNumTurnos() {
-        return numTurnos;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    public void setNumTurnos(int numTurnos) {
-        this.numTurnos = numTurnos;
     }
 
     @Override
@@ -68,9 +51,12 @@ public class MovimientoEstado extends Movimiento {
         super.setTipoMov(tipoMov);
     }
 
-    @Override
-    public void aplicarMovimiento(Pokemon pokemon) {
-        pokemon.setEstado(this.estado); 
-    }
+    
+      @Override
+      public void aplicarMovimiento(Pokemon pokemon) {
+        pokemon.setVelocidad(MejoraDefSpc.setVelocidad(pokemon.getVelocidad()+5));
+
+     }
+     
 
 }
