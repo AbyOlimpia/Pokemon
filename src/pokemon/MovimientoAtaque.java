@@ -18,7 +18,6 @@ public class MovimientoAtaque extends Movimiento {
      */
     public MovimientoAtaque(String nombreMov, Tipo tipoMov, int potenciaAtac, int consumEstamina) {
         super(nombreMov, tipoMov, potenciaAtac);
-        // TODO Auto-generated constructor stub
     }
 
     /**
@@ -32,13 +31,11 @@ public class MovimientoAtaque extends Movimiento {
 
     @Override
     public String getNombreMov() {
-        // TODO Auto-generated method stub
         return super.getNombreMov();
     }
 
     @Override
     public Tipo getTipoMov() {
-        // TODO Auto-generated method stub
         return super.getTipoMov();
 
     }
@@ -53,19 +50,16 @@ public class MovimientoAtaque extends Movimiento {
 
     @Override
     public void setConsumEstamina(int consumEstamina) {
-        // TODO Auto-generated method stub
         super.setConsumEstamina(consumEstamina);
     }
 
     @Override
     public void setNombreMov(String nombreMov) {
-        // TODO Auto-generated method stub
         super.setNombreMov(nombreMov);
     }
 
     @Override
     public void setTipoMov(Tipo tipoMov) {
-        // TODO Auto-generated method stub
         super.setTipoMov(tipoMov);
     }
 
@@ -76,9 +70,4 @@ public class MovimientoAtaque extends Movimiento {
         else
             pokemon.setVitalidad(pokemon.getVitalidad() - potenciaAtaq);
     }
-    //formula pokemon
-    //comparar tipo movimiento y tipo rival.geTipo
-
-    
-
 }

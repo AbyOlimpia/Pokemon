@@ -4,7 +4,7 @@ public abstract class Movimiento {
     private String nombreMov;
     private Tipo tipoMov;
     private int consumEstamina;
-    
+
     /**
      * Constructor con los parámetros necesarios para los movimientos
      * 
@@ -51,11 +51,5 @@ public abstract class Movimiento {
     }
 
     public abstract void aplicarMovimiento(Pokemon pokemon);
-        /*if ((pokemon.getVitalidad() - potenciaAtaq) < 0)
-        pokemon.setVitalidad(0);
-    else
-        pokemon.setVitalidad(pokemon.getVitalidad() - potenciaAtaq);
-}
-    };*/
 
 }

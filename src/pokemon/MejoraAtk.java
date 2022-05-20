@@ -13,11 +13,10 @@ public class MejoraAtk extends Mejora {
      * @param tipoMov
      * @param consumEstamina
      */
-    
 
     MejoraAtk(String nombreMov, Tipo tipoMov, int consumEstamina, MejorasH mejoraEstadiscticas, int cantMejora) {
         super(nombreMov, tipoMov, consumEstamina, mejoraEstadiscticas, cantMejora);
-        
+
     }
 
     /**
@@ -25,31 +24,26 @@ public class MejoraAtk extends Mejora {
      */
     @Override
     public int getCantMejora() {
-        // TODO Auto-generated method stub
         return super.getCantMejora();
     }
 
     @Override
     public String getNombreMov() {
-        // TODO Auto-generated method stub
         return super.getNombreMov();
     }
 
     @Override
     public int getConsumEstamina() {
-        // TODO Auto-generated method stub
         return super.getConsumEstamina();
     }
 
     @Override
     public String getTipoMejora() {
-        // TODO Auto-generated method stub
         return super.getTipoMejora();
     }
 
     @Override
     public Tipo getTipoMov() {
-        // TODO Auto-generated method stub
         return super.getTipoMov();
     }
 
@@ -64,10 +58,7 @@ public class MejoraAtk extends Mejora {
 
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-        pokemon.setAtaque(MejoraAtk.setAtaque(pokemon.getAtaque()+5)); 
+        pokemon.setAtaque(MejoraAtk.setAtaque(pokemon.getAtaque() + 5));
     }
-
-
-    
 
 }

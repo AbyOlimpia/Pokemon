@@ -51,12 +51,10 @@ public class MejoraVel extends Movimiento {
         super.setTipoMov(tipoMov);
     }
 
-    
-      @Override
-      public void aplicarMovimiento(Pokemon pokemon) {
-        pokemon.setVelocidad(MejoraDefSpc.setVelocidad(pokemon.getVelocidad()+5));
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+        pokemon.setVelocidad(MejoraDefSpc.setVelocidad(pokemon.getVelocidad() + 5));
 
-     }
-     
+    }
 
 }

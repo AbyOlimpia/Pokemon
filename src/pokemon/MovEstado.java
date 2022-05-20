@@ -15,7 +15,7 @@ public class MovEstado extends Movimiento {
      */
     public MovEstado(String nombreMov, Tipo tipoMov, int consumEstamina, Estado estado, int turnos) {
         super(nombreMov, tipoMov, consumEstamina);
-        this.turnos=turnos;
+        this.turnos = turnos;
         this.estado = estado;
         setConsumEstamina(turnos * 10);
 
@@ -27,9 +27,11 @@ public class MovEstado extends Movimiento {
     public int getTurnos() {
         return turnos;
     }
+
     public void setTurnos(int turnos) {
-    this.turnos = turnos;
+        this.turnos = turnos;
     }
+
     @Override
     public int getConsumEstamina() {
         return super.getConsumEstamina();
@@ -44,9 +46,12 @@ public class MovEstado extends Movimiento {
     public Tipo getTipoMov() {
         return super.getTipoMov();
     }
+
     public Estado getEstado() {
         return estado;
-    }public void setEstado(Estado estado) {
+    }
+
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
@@ -67,9 +72,8 @@ public class MovEstado extends Movimiento {
 
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-    pokemon.setEstado(this.estado);
-        
+        pokemon.setEstado(this.estado);
+
     }
 
 }
-

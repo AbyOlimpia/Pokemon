@@ -6,5 +6,5 @@ public enum MejorasH {
     DEFENSA,
     DEFENSA_ESPECIAL,
     VELOCIDAD
-    
+
 }

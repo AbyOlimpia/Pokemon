@@ -57,7 +57,7 @@ public class MejoraDef extends Movimiento {
 
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-   pokemon.setDefensa(MejoraDef.setDefensa(pokemon.getDefensa()+5));
+        pokemon.setDefensa(MejoraDef.setDefensa(pokemon.getDefensa() + 5));
     }
 
 }

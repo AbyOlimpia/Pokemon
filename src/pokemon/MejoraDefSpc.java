@@ -22,19 +22,16 @@ public class MejoraDefSpc extends Movimiento {
      */
     @Override
     public int getConsumEstamina() {
-        // TODO Auto-generated method stub
         return super.getConsumEstamina();
     }
 
     @Override
     public String getNombreMov() {
-        // TODO Auto-generated method stub
         return super.getNombreMov();
     }
 
     @Override
     public Tipo getTipoMov() {
-        // TODO Auto-generated method stub
         return super.getTipoMov();
     }
 
@@ -57,15 +54,14 @@ public class MejoraDefSpc extends Movimiento {
         return i;
     }
 
-    public void aplicarMejoraDefSpc(Pokemon pokemon){
-        
+    public void aplicarMejoraDefSpc(Pokemon pokemon) {
 
     }
 
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-        pokemon.setDefensaSp(MejoraDefSpc.setDefensaSp(pokemon.getDefensaSp()+5));
-        
+        pokemon.setDefensaSp(MejoraDefSpc.setDefensaSp(pokemon.getDefensaSp() + 5));
+
     }
 
     public static int setVelocidad(int i) {

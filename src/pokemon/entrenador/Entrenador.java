@@ -2,6 +2,7 @@ package src.pokemon.entrenador;
 
 import java.util.LinkedList;
 
+import src.pokemon.Pokedex;
 /**
  * @author @AbyOlimpia @AlexCesur
  */
@@ -10,10 +11,15 @@ import src.pokemon.Pokemon;
 public class Entrenador {
     private String nombre;
     private int pokedollar;
-    //private LinkedList<Pokedex> pokemon;
+    private LinkedList<Pokemon> pokemon;
 
     Entrenador(String paramNombre) {
         this.nombre = paramNombre;
+        pokemon = new LinkedList<>();
+        pokemon.add(Pokedex.devolverPokemonRandom());
+        pokemon.add(Pokedex.devolverPokemonRandom());
+        pokemon.add(Pokedex.devolverPokemonRandom());
+        pokemon.add(Pokedex.devolverPokemonRandom());
 
     }
 
@@ -25,8 +31,24 @@ public class Entrenador {
         return pokedollar;
     }
 
+    public LinkedList<Pokemon> getPokemon() {
+        return pokemon;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPokedollar(int pokedollar) {
+        this.pokedollar = pokedollar;
+    }
+
+    public void setPokemon(LinkedList<Pokemon> pokemon) {
+        this.pokemon = pokemon;
+    }
+
     /**
-     * Con este método mejoramos la defensa, la defensa especial y la vitalidad
+     * Método para mejorar la defensa, la defensa especial y la vitalidad
      * Con un coste de (20 * el nivel del pokemon a mejorar) Pokedóllares
      * 
      * @param pokemon
@@ -39,7 +61,7 @@ public class Entrenador {
     }
 
     /**
-     * Con este método mejoramos el ataque, el ataque especial y la velocidad
+     * Método para mejorar el ataque, el ataque especial y la velocidad
      * Con un coste de (30 * el nivel del pokemon a mejorar) Pokedóllares
      * 
      * @param pokemon
@@ -52,7 +74,7 @@ public class Entrenador {
     }
 
     /**
-     * Con este método mejoramos la velocidad, el ataque, la defensa y la vitalidad
+     * Método para mejorar la velocidad, el ataque, la defensa y la vitalidad
      * Con un coste de (40 * el nivel del pokemon a mejorar) Pokedóllares
      * 
      * @param pokemon
@@ -67,7 +89,7 @@ public class Entrenador {
     }
 
     /**
-     * Con este método mejoramos la velocidad, el ataque especial, la defensa
+     * Método para mejorar la velocidad, el ataque especial, la defensa
      * especial y la vitalidad
      * Con un coste de (40 * el nivel del pokemon a mejorar) Pokedóllares
      * 

@@ -105,12 +105,13 @@ public class ListaMov {
     public static Movimiento devolverMovimientoRandomMejora() {
         Random rnd = new Random();
         int indice = rnd.nextInt(movimientosMejora.size());
-        return movimientosAtaque.get(indice);
+        return movimientosMejora.get(indice);
     }
+
     public static Movimiento devolverMovimientoRandomEstado() {
         Random rnd = new Random();
         int indice = rnd.nextInt(movimientosMejora.size());
-        return movimientosAtaque.get(indice);
+        return movimientosEstado.get(indice);
     }
 
 }

@@ -20,52 +20,44 @@ public class MejoraAtkSpc extends Movimiento {
     /**
      * Setters y getters
      */
-    
+
     @Override
     public int getConsumEstamina() {
-        // TODO Auto-generated method stub
         return super.getConsumEstamina();
     }
 
     @Override
     public String getNombreMov() {
-        // TODO Auto-generated method stub
         return super.getNombreMov();
     }
 
     @Override
     public Tipo getTipoMov() {
-        // TODO Auto-generated method stub
         return super.getTipoMov();
     }
+
     @Override
     public void setNombreMov(String nombreMov) {
-        // TODO Auto-generated method stub
         super.setNombreMov(nombreMov);
     }
 
     @Override
     public void setConsumEstamina(int consumEstamina) {
-        // TODO Auto-generated method stub
         super.setConsumEstamina(consumEstamina);
     }
 
     @Override
     public void setTipoMov(Tipo tipoMov) {
-        // TODO Auto-generated method stub
         super.setTipoMov(tipoMov);
     }
 
-
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-    pokemon.setAtaqueSp(MejoraAtkSpc.setAtaqueSp(pokemon.getAtaqueSp()+5));    
+        pokemon.setAtaqueSp(MejoraAtkSpc.setAtaqueSp(pokemon.getAtaqueSp() + 5));
     }
 
     private static int setAtaqueSp(int i) {
         return i;
     }
-    
-     
 
 }
