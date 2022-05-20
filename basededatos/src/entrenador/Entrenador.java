@@ -1,0 +1,85 @@
+package entrenador;
+
+import java.util.LinkedList;
+
+/**
+ * @author @AbyOlimpia @AlexCesur
+ */
+import pokemon.Pokemon;
+
+public class Entrenador {
+    private String nombre;
+    private int pokedollar;
+    //private LinkedList<Pokedex> pokemon;
+
+    Entrenador(String paramNombre) {
+        this.nombre = paramNombre;
+
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getPokedollar() {
+        return pokedollar;
+    }
+
+    /**
+     * Con este método mejoramos la defensa, la defensa especial y la vitalidad
+     * Con un coste de (20 * el nivel del pokemon a mejorar) Pokedóllares
+     * 
+     * @param pokemon
+     */
+    public void entrenamientoPesado(Pokemon pokemon) {
+        pokedollar = pokedollar - 20 * pokemon.getNivel();
+        pokemon.setDefensaSp(pokemon.getDefensaSp() + 5);
+        pokemon.setDefensa(pokemon.getDefensa() + 5);
+        pokemon.setVitalidad(pokemon.getVitalidad() + 5);
+    }
+
+    /**
+     * Con este método mejoramos el ataque, el ataque especial y la velocidad
+     * Con un coste de (30 * el nivel del pokemon a mejorar) Pokedóllares
+     * 
+     * @param pokemon
+     */
+    public void entrenamientoFurioso(Pokemon pokemon) {
+        pokedollar = pokedollar - 30 * pokemon.getNivel();
+        pokemon.setAtaque(pokemon.getAtaque() + 5);
+        pokemon.setAtaqueSp(pokemon.getAtaqueSp() + 5);
+        pokemon.setVelocidad(pokemon.getVelocidad() + 5);
+    }
+
+    /**
+     * Con este método mejoramos la velocidad, el ataque, la defensa y la vitalidad
+     * Con un coste de (40 * el nivel del pokemon a mejorar) Pokedóllares
+     * 
+     * @param pokemon
+     */
+
+    public void entrenamientoFuncional(Pokemon pokemon) {
+        pokedollar = pokedollar - 40 * pokemon.getNivel();
+        pokemon.setVelocidad(pokemon.getVelocidad() + 5);
+        pokemon.setAtaque(pokemon.getAtaque() + 5);
+        pokemon.setDefensa(pokemon.getDefensa() + 5);
+        pokemon.setVitalidad(pokemon.getVitalidad() + 5);
+    }
+
+    /**
+     * Con este método mejoramos la velocidad, el ataque especial, la defensa
+     * especial y la vitalidad
+     * Con un coste de (40 * el nivel del pokemon a mejorar) Pokedóllares
+     * 
+     * @param pokemon
+     */
+
+    public void entrenamientoOnirico(Pokemon pokemon) {
+        pokedollar = pokedollar - 40 * pokemon.getNivel();
+        pokemon.setVelocidad(pokemon.getVelocidad() + 5);
+        pokemon.setAtaqueSp(pokemon.getAtaqueSp() + 5);
+        pokemon.setDefensaSp(pokemon.getDefensaSp() + 5);
+        pokemon.setVitalidad(pokemon.getVitalidad() + 5);
+    }
+
+}
