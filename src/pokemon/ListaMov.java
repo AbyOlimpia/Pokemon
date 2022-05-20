@@ -6,6 +6,11 @@ package src.pokemon;
 import java.util.LinkedList;
 import java.util.Random;
 
+import src.mejora.MejoraAtkSpc;
+import src.mejora.MejoraDef;
+import src.mejora.MejoraDefSpc;
+import src.mejora.MejoraVel;
+
 public class ListaMov {
 
     /**

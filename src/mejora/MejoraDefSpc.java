@@ -1,32 +1,29 @@
-package src.pokemon;
+package src.mejora;
+
+import src.pokemon.Movimiento;
+import src.pokemon.Pokemon;
+import src.pokemon.Tipo;
 
 /**
  * @author @AbyOlimpia @AlexCesur
  */
-public class MejoraDef extends Movimiento {
+public class MejoraDefSpc extends Movimiento {
 
     /**
-     * Constructor heredado de movimiento con el nombre del movimiento, el tipo y el
-     * consumo de estamina
+     * Constructor que hereda de movimiento, con el nombre del movimiento, el tipo y
+     * el consumo de estamina
      * 
      * @param nombreMov
      * @param tipoMov
      * @param consumEstamina
      */
-    MejoraDef(String nombreMov, Tipo tipoMov, int consumEstamina) {
+    MejoraDefSpc(String nombreMov, Tipo tipoMov, int consumEstamina) {
         super(nombreMov, tipoMov, consumEstamina);
     }
 
     /**
      * Setters y Getters
      */
-
-    @Override
-    public String[] getArrayMov() {
-        // TODO Auto-generated method stub
-        return super.getArrayMov();
-    }
-
     @Override
     public int getConsumEstamina() {
         // TODO Auto-generated method stub
@@ -46,34 +43,37 @@ public class MejoraDef extends Movimiento {
     }
 
     @Override
-    public void setArrayMov(String[] arrayMov) {
-        // TODO Auto-generated method stub
-        super.setArrayMov(arrayMov);
-    }
-
-    @Override
     public void setConsumEstamina(int consumEstamina) {
-        // TODO Auto-generated method stub
         super.setConsumEstamina(consumEstamina);
     }
 
     @Override
     public void setNombreMov(String nombreMov) {
-        // TODO Auto-generated method stub
         super.setNombreMov(nombreMov);
     }
 
     @Override
     public void setTipoMov(Tipo tipoMov) {
-        // TODO Auto-generated method stub
         super.setTipoMov(tipoMov);
     }
 
-    /*
-     * @Override
-     * public void aplicarMovimiento(Pokemon pokemon) {
-     * 
-     * }
-     */
+    public static int setDefensaSp(int i) {
+        return i;
+    }
+
+    public void aplicarMejoraDefSpc(Pokemon pokemon){
+        
+
+    }
+
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+        pokemon.setDefensaSp(MejoraDefSpc.setDefensaSp(pokemon.getDefensaSp()+5));
+        
+    }
+
+    public static int setVelocidad(int i) {
+        return 0;
+    }
 
 }

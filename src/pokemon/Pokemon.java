@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class Pokemon {
     private String nombre;
     private String mote;
-    protected int vitalidad;
+    protected float vitalidad;
     private int ataque;
     private int defensa;
     private int ataqueSp;
@@ -17,7 +17,7 @@ public class Pokemon {
     private int nivel;
     private int fertilidad;
     private LinkedList<Movimiento> movimientos;
-    private Estado estados;
+    private Estado estado;
     private Tipo tipo;
     private int numPokedex;
     private int velocidad;
@@ -66,7 +66,7 @@ public class Pokemon {
         return tipo;
     }
 
-    public int getVitalidad() {
+    public float getVitalidad() {
         return vitalidad;
     }
 
@@ -87,7 +87,7 @@ public class Pokemon {
     }
 
     public Estado getEstados() {
-        return estados;
+        return estado;
     }
 
     public int getEstamina() {
@@ -131,10 +131,6 @@ public class Pokemon {
         this.defensaSp = defensaSp;
     }
 
-    public void setEstados(Estado estados) {
-        this.estados = estados;
-    }
-
     public void setEstamina(int estamina) {
         this.estamina = estamina;
     }
@@ -160,8 +156,8 @@ public class Pokemon {
         this.tipo = tipo;
     }
 
-    public void setVitalidad(int vitalidad) {
-        this.vitalidad = vitalidad;
+    public void setVitalidad(float f) {
+        this.vitalidad = f;
     }
 
     public void setNumPokedex(int numPokedex) {
@@ -216,45 +212,30 @@ public class Pokemon {
         return Efectividad.POCO_EFICAZ;
     }
 
-    // HP = HP -(PotenciaMov + Ataque.this - defensa.rival.pokemon *
-    // efectividadDelTipoMov)
-    /*
-     * if(daño=<0)
-     * daño =1;
-     */
-
     /**
      * Ajuste de ataque si es Super Eficaz, Eficaz o Poco Eficaz
      * 
      * @param pokemon
-     * @param mov
+     * @param listaMovimientosPkmnJugador
      * @return
      */
-    public int atacar(Pokemon pokemon, Movimiento mov) {
-        if (this.comprobarTipos(pokemon) == Efectividad.SUPER_EFICAZ) {
-            estamina = estamina - 10;
-            pokemon.vitalidad = pokemon.vitalidad
-                    - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * (int) 1.5);
-            return pokemon.vitalidad;
-        } else if (this.comprobarTipos(pokemon) == Efectividad.EFICAZ) {
-            estamina = estamina - 5;
-            pokemon.vitalidad = pokemon.vitalidad
-                    - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * 1);
-            return pokemon.vitalidad;
-        } else if (this.comprobarTipos(pokemon) == Efectividad.POCO_EFICAZ) {
-            estamina = estamina - 1;
-            pokemon.vitalidad = pokemon.vitalidad
-                    - (MovimientoAtaque.getPotenciaAtaq() + this.ataque - pokemon.defensa * (int) 0.5);
-            return pokemon.vitalidad;
+    public float atacar(Pokemon pokemon, int posicionAtaque) {
+        for(int i =0;i<movimientos.size();i++){
+        if(posicionAtaque == i){
+             movimientos.get(i);
         }
-        return pokemon.vitalidad;
+        
+        
+        
+            /*Movimiento movimiento = this.getMovimientos().get(posicionAtaque);
+        movimiento.aplicarMovimiento(pokemon);*/
+        
+        
+        }
+        return posicionAtaque;
     }
 
-    /*
-     * public void aplicarMejora(Mejora mejora){
-     * mejora.aplicarMovimiento(MejoraAtk.class(this));
-     * }
-     */
+
 
     /**
      * Método para subir el nivel
@@ -282,15 +263,11 @@ public class Pokemon {
 
     public String toString() {
         return "Nombre Pokemon = " + this.nombre + ", nivel del Pokemon = " + this.nivel + ", vida total = "
-                + this.vitalidad;
+                + this.vitalidad +" ,ataque del Pokemon: "+ this.ataque;
 
     }
 
-    /*
-     * public String toString(){
-     * return "Nombre = "+this.nombre+" Nivel = "+this.nivel;
-     * 
-     * }
-     */
-
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 }

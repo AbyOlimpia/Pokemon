@@ -1,29 +1,32 @@
-package src.pokemon;
+package src.mejora;
+
+import src.pokemon.Movimiento;
+import src.pokemon.Pokemon;
+import src.pokemon.Tipo;
 
 /**
  * @author @AbyOlimpia @AlexCesur
  */
-public class MovimientoEstado extends Movimiento {
-
-    private Estado estado;
-    private int numTurnos;
+public class MejoraDef extends Movimiento {
 
     /**
-     * Constructor heredado de movimiento para saber el nombre, el tipo y el consumo
-     * de estamina
+     * Constructor heredado de movimiento con el nombre del movimiento, el tipo y el
+     * consumo de estamina
      * 
      * @param nombreMov
      * @param tipoMov
-     * @param potenciaAtac
      * @param consumEstamina
      */
-    MovimientoEstado(String nombreMov, Tipo tipoMov, int consumEstamina) {
+    MejoraDef(String nombreMov, Tipo tipoMov, int consumEstamina) {
         super(nombreMov, tipoMov, consumEstamina);
     }
 
+    /**
+     * Setters y Getters
+     */
+
     @Override
     public int getConsumEstamina() {
-
         return super.getConsumEstamina();
     }
 
@@ -35,22 +38,6 @@ public class MovimientoEstado extends Movimiento {
     @Override
     public Tipo getTipoMov() {
         return super.getTipoMov();
-    }
-
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public int getNumTurnos() {
-        return numTurnos;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    public void setNumTurnos(int numTurnos) {
-        this.numTurnos = numTurnos;
     }
 
     @Override
@@ -68,9 +55,13 @@ public class MovimientoEstado extends Movimiento {
         super.setTipoMov(tipoMov);
     }
 
+    public static int setDefensa(int i) {
+        return i;
+    }
+
     @Override
     public void aplicarMovimiento(Pokemon pokemon) {
-        pokemon.setEstado(this.estado); 
+   pokemon.setDefensa(MejoraDef.setDefensa(pokemon.getDefensa()+5));
     }
 
 }

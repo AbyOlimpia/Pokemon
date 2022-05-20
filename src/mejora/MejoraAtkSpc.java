@@ -1,4 +1,8 @@
-package src.pokemon;
+package src.mejora;
+
+import src.pokemon.Movimiento;
+import src.pokemon.Pokemon;
+import src.pokemon.Tipo;
 
 /**
  * @author @AbyOlimpia @AlexCesur
@@ -20,12 +24,7 @@ public class MejoraAtkSpc extends Movimiento {
     /**
      * Setters y getters
      */
-    @Override
-    public String[] getArrayMov() {
-        // TODO Auto-generated method stub
-        return super.getArrayMov();
-    }
-
+    
     @Override
     public int getConsumEstamina() {
         // TODO Auto-generated method stub
@@ -43,13 +42,6 @@ public class MejoraAtkSpc extends Movimiento {
         // TODO Auto-generated method stub
         return super.getTipoMov();
     }
-
-    @Override
-    public void setArrayMov(String[] arrayMov) {
-        // TODO Auto-generated method stub
-        super.setArrayMov(arrayMov);
-    }
-
     @Override
     public void setNombreMov(String nombreMov) {
         // TODO Auto-generated method stub
@@ -68,10 +60,16 @@ public class MejoraAtkSpc extends Movimiento {
         super.setTipoMov(tipoMov);
     }
 
-    /*
-     * @Override
-     * public void aplicarMovimiento(Pokemon pokemon) {
-     * }
-     */
+
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+    pokemon.setAtaqueSp(MejoraAtkSpc.setAtaqueSp(pokemon.getAtaqueSp()+5));    
+    }
+
+    private static int setAtaqueSp(int i) {
+        return i;
+    }
+    
+     
 
 }

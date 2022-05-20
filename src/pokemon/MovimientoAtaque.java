@@ -31,12 +31,6 @@ public class MovimientoAtaque extends Movimiento {
     }
 
     @Override
-    public String[] getArrayMov() {
-        // TODO Auto-generated method stub
-        return super.getArrayMov();
-    }
-
-    @Override
     public String getNombreMov() {
         // TODO Auto-generated method stub
         return super.getNombreMov();
@@ -49,18 +43,12 @@ public class MovimientoAtaque extends Movimiento {
 
     }
 
-    public static int getPotenciaAtaq() {
+    public int getPotenciaAtaq() {
         return potenciaAtaq;
     }
 
     public void setPotenciaAtaq(int potenciaAtaq) {
         MovimientoAtaque.potenciaAtaq = potenciaAtaq;
-    }
-
-    @Override
-    public void setArrayMov(String[] arrayMov) {
-        // TODO Auto-generated method stub
-        super.setArrayMov(arrayMov);
     }
 
     @Override
@@ -81,11 +69,14 @@ public class MovimientoAtaque extends Movimiento {
         super.setTipoMov(tipoMov);
     }
 
-    /*
-     * @Override
-     * public void aplicarMovimiento(Pokemon pokemon) {
-     * 
-     * }
-     */
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+        if ((pokemon.getVitalidad() - potenciaAtaq) < 0)
+            pokemon.setVitalidad(0);
+        else
+            pokemon.setVitalidad(pokemon.getVitalidad() - potenciaAtaq);
+    }
+
+    
 
 }

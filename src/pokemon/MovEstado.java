@@ -1,6 +1,7 @@
 package src.pokemon;
 
 public class MovEstado extends Movimiento {
+    private int turnos;
 
     /**
      * Constructor heredado de movimiento, con el nombre del movimiento, el tipo, el
@@ -11,61 +12,56 @@ public class MovEstado extends Movimiento {
      * @param consumEstamina
      * @param estado
      */
-    public MovEstado(String nombreMov, Tipo tipoMov, int consumEstamina, Estado estado) {
+    public MovEstado(String nombreMov, Tipo tipoMov, int consumEstamina, Estado estado, int turnos) {
         super(nombreMov, tipoMov, consumEstamina);
-        // TODO Auto-generated constructor stub
+        this.turnos=turnos;
+        setConsumEstamina(turnos * 10);
+
     }
 
     /**
      * Override con getters y setters
      */
-
-    @Override
-    public String[] getArrayMov() {
-        // TODO Auto-generated method stub
-        return super.getArrayMov();
+    public int getTurnos() {
+        return turnos;
     }
-
+    public void setTurnos(int turnos) {
+    this.turnos = turnos;
+    }
     @Override
     public int getConsumEstamina() {
-        // TODO Auto-generated method stub
         return super.getConsumEstamina();
     }
 
     @Override
     public String getNombreMov() {
-        // TODO Auto-generated method stub
         return super.getNombreMov();
     }
 
     @Override
     public Tipo getTipoMov() {
-        // TODO Auto-generated method stub
         return super.getTipoMov();
     }
 
     @Override
-    public void setArrayMov(String[] arrayMov) {
-        // TODO Auto-generated method stub
-        super.setArrayMov(arrayMov);
-    }
-
-    @Override
     public void setConsumEstamina(int consumEstamina) {
-        // TODO Auto-generated method stub
         super.setConsumEstamina(consumEstamina);
     }
 
     @Override
     public void setNombreMov(String nombreMov) {
-        // TODO Auto-generated method stub
         super.setNombreMov(nombreMov);
     }
 
     @Override
     public void setTipoMov(Tipo tipoMov) {
-        // TODO Auto-generated method stub
         super.setTipoMov(tipoMov);
+    }
+
+    @Override
+    public void aplicarMovimiento(Pokemon pokemon) {
+    pokemon.setEstado(ListaMov.movimientosEstado);
+        
     }
 
 }
